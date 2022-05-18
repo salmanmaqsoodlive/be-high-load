@@ -1,32 +1,49 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <Navbar />
+    <router-view />
   </div>
 </template>
 
+<script>
+// @ is an alias to /src
+import Navbar from "@/components/Navbar.vue";
+
+export default {
+  components: {
+    Navbar,
+  },
+};
+</script>
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;600&family=Nunito:wght@200;300;400;500&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  /* text-align: center; */
 }
 
-nav {
-  padding: 30px;
+a {
+  text-decoration: none !important;
+}
+.nav-item a {
+  font-size: 17px;
+  line-height: 163.15%;
+  /* identical to box height, or 28px */
+
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #1c3e5f !important;
+  text-decoration: none !important;
+}
+.nav-item a:hover {
+  color: #f48a17 !important;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
+.nav-item a.router-link-exact-active {
+  color: #f48a17 !important;
 }
 </style>
