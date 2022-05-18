@@ -4,7 +4,8 @@
     <b-container>
       <b-navbar-brand class="col-6">
         <router-link to="/">
-          <img src="../assets/Logo.png" width="195.5" />
+          Logo
+          <!-- <img src="../assets/Logo.png" width="195.5" /> -->
         </router-link>
       </b-navbar-brand>
       <b-navbar-toggle target="navbar-toggle-collapse"> </b-navbar-toggle>
