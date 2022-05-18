@@ -1,7 +1,7 @@
 <template>
   <section>
     <Showcase />
-    <!-- <Projects /> -->
+    <!-- <Projects />h -->
   </section>
 </template>
 
