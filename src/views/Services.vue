@@ -1,20 +1,23 @@
 <template>
   <section>
     <Showcase />
-    <!-- <Projects />h -->
+    <ServiceListComponent />
+    <!-- <Projects /> -->
   </section>
 </template>
 
 <script>
 // @ is an alias to /src
-import Showcase from "@/components/Showcase.vue";
-import Projects from "@/views/Projects.vue";
+import Showcase from "@/components/ServicesComponents/Showcase.vue";
+// import Projects from "../views/Projects.vue";
+import ServiceListComponent from "@/components/ServicesComponents/ServicesListingComponent.vue";
 
 export default {
-  name: "HomeView",
+  name: "Services",
   components: {
     Showcase,
-    Projects,
+    // Projects,
+    ServiceListComponent,
   },
 };
 </script>

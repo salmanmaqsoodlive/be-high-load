@@ -31,7 +31,7 @@
 
 <script>
 import company from "@/assets/company.png";
-import Showcase from "@/components/Showcase.vue";
+import Showcase from "@/components/ServicesComponents/Showcase.vue";
 export default {
   name: "Navbar",
   components: {

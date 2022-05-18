@@ -82,7 +82,7 @@ a {
       rgba(255, 255, 255, 0.39),
       rgba(255, 255, 255, 0.39)
     ),
-    url("../assets/christopher-gower-vjMgqUkS8q8-unsplash\ 1.jpg");
+    url("../../assets/christopher-gower-vjMgqUkS8q8-unsplash\ 1.jpg");
 }
 
 @media only screen and (max-width: 750px) {
