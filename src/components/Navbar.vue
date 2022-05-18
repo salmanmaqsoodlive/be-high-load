@@ -15,13 +15,13 @@
             <router-link to="/">Services</router-link>
           </b-nav-item>
           <b-nav-item class="margin-left">
-            <router-link to="/about">Projects</router-link>
+            <router-link to="/projects">Projects</router-link>
           </b-nav-item>
           <b-nav-item class="margin-left">
-            <router-link to="/about">Career</router-link>
+            <router-link to="/career">Career</router-link>
           </b-nav-item>
           <b-nav-item class="margin-left">
-            <router-link to="/about">Contact Us</router-link>
+            <router-link to="/contact-us">Contact Us</router-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
