@@ -4,8 +4,7 @@
     <b-container>
       <b-navbar-brand class="col-6">
         <router-link to="/">
-          Logo
-          <!-- <img src="../assets/Logo.png" width="195.5" /> -->
+          <img :src="Logo" width="195.5" />
         </router-link>
       </b-navbar-brand>
       <b-navbar-toggle target="navbar-toggle-collapse"> </b-navbar-toggle>
@@ -31,6 +30,7 @@
 </template>
 
 <script>
+import Logo from "@/assets/Logo.png";
 import Showcase from "@/components/Showcase.vue";
 export default {
   name: "Navbar",
