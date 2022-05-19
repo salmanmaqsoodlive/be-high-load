@@ -1,12 +1,8 @@
 <template>
-  <div id="#projects" class="projects-container">
-    <h1>This is an projects pages</h1>
-  </div>
+  <section class="service-container">
+    <div class="container">
+      <p class="services-paragraph">Services list</p>
+      <h1 class="services-heading">Explore what we offer</h1>
+    </div>
+  </section>
 </template>
-
-<style>
-.projects-container {
-  position: relative !important;
-  top: 800px !important;
-}
-</style>

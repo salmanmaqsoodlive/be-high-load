@@ -1,18 +1,22 @@
 <template>
   <div class="row d-flex align-items-center">
-    <div class="col-6">
-      <h1>Web App Development</h1>
+    <div class="col-md-6 col-12">
+      <h1>{{ title }}</h1>
       <p class="mt-5">
-        Web app development services help design, build, and evolve web-based
-        software.
+        {{ description }}
       </p>
     </div>
-    <div class="col-6 image">
-      <img src="@/assets/web-dev-service.png" width="400" />
+    <div class="col-md-6 image col-sm-12 d-sm-block d-none">
+      <img :src="src" :width="400" />
     </div>
   </div>
 </template>
 
+<script>
+export default {
+  props: ["src", "title", "description"],
+};
+</script>
 <style scoped>
 .image {
   text-align: end;

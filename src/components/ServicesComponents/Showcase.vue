@@ -86,6 +86,9 @@ a {
 }
 
 @media only screen and (max-width: 750px) {
+  .showcase {
+    height: 600px !important;
+  }
   .main-text {
     font-weight: 400;
     width: 250px;
