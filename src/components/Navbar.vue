@@ -11,9 +11,7 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item>
-            <router-link to="/">Services</router-link>
-          </b-nav-item>
+          <b-nav-item href="#service"> Services </b-nav-item>
           <b-nav-item class="margin-left">
             <router-link to="/projects">Projects</router-link>
           </b-nav-item>

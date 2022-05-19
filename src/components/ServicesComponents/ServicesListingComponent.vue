@@ -1,5 +1,5 @@
 <template>
-  <section class="service-container">
+  <section>
     <div class="container">
       <p class="services-paragraph">Services list</p>
       <h1 class="services-heading">Explore what we offer</h1>
@@ -49,10 +49,7 @@ export default {
 .margin-t-1 {
   margin-top: 250px;
 }
-.service-container {
-  position: relative !important;
-  top: 750px;
-}
+
 .services-paragraph {
   font-family: "Nunito";
   font-style: normal;
