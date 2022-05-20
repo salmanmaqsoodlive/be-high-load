@@ -2,11 +2,64 @@
   <div class="container margin-t">
     <p class="project-paragraph">Join our team</p>
     <h1 class="project-heading margin-b">Boost your career with us</h1>
-    <div class="row justify-content-between"></div>
+    <div class="row justify-content-between">
+      <div class="col-md-6 col-12 mb-5">
+        <CareerCard
+          title="Mid React developer"
+          salary="salary"
+          jobType="Remote/Hybrid"
+        />
+      </div>
+      <div class="col-md-6 col-12 mb-5">
+        <CareerCard
+          title="PHP developer"
+          salary="salary"
+          jobType="Remote/Hybrid"
+        />
+      </div>
+      <div class="col-md-6 col-12 mb-5">
+        <CareerCard
+          title="JavaScript developer"
+          salary="salary"
+          jobType="Remote/Hybrid"
+        />
+      </div>
+      <div class="col-md-6 col-12 mb-5">
+        <CareerCard
+          title="Business Analyst"
+          salary="salary"
+          jobType="Remote/Hybrid"
+        />
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5 mb-5">
+      <div class="col-2 text-center">
+        <button class="shadow show-more-btn">Show More</button>
+      </div>
+    </div>
   </div>
 </template>
 
+<script>
+import CareerCard from "@/components/Career/CareerCard.vue";
+export default {
+  components: {
+    CareerCard,
+  },
+};
+</script>
+
 <style>
+.show-more-btn {
+  background: #fafafa !important;
+  border: 1px solid #f48a17 !important;
+  border-radius: 25px !important;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: capitalize;
+  padding: 12px 27px;
+  color: #f48a17;
+}
 .margin-b {
   margin-bottom: 120px;
 }
