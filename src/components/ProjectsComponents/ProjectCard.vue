@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card shadow">
+    <div class="card shadow btn">
       <img class="card-img-top" alt="Card image cap" :src="src" />
       <div class="card-body p-4">
         <p class="sub-heading mt-4">Category</p>

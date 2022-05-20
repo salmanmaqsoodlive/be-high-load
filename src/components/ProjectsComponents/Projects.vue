@@ -13,6 +13,33 @@
         <ProjectCard :src="image3" />
       </div>
     </div>
+    <div class="row margin-t align-items-center">
+      <div class="col-12 col-md-6">
+        <img
+          class="project-detail-img shadow"
+          :style="`background-image: url(${image2});`"
+        />
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="sub-heading">Category</p>
+        <h5 class="card-title mb-5">Project title</h5>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tellus
+          id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum
+          primis in faucibus.
+        </p>
+        <p class="text mt-4">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia curae; Integer hendrerit turpis id erat varius
+          fermentum.
+        </p>
+        <p class="text mt-4">TECHNOLOGIES</p>
+        <div class="col-12">
+          <img src="@/assets/physics 1.png" />
+          <img src="@/assets/html5 1.png" style="margin-left: 15px" />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -42,7 +69,16 @@ export default {
   margin-bottom: 120px;
 }
 .margin-t {
-  margin-top: 220px;
+  margin-top: 220px !important;
+}
+.project-detail-img {
+  border-radius: 8px;
+  /* box-shadow: 2px 2px 10px 4px rgb(217, 217, 217); */
+  height: 250px !important;
+  width: 356px !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .project-paragraph {
   font-family: "Nunito";
@@ -63,5 +99,34 @@ export default {
   text-align: center;
   letter-spacing: 0.02em;
   color: rgba(28, 62, 95, 0.95);
+}
+
+.card-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: rgba(28, 62, 95, 0.95);
+}
+.sub-heading {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 174.2%;
+  letter-spacing: 0.06em;
+  color: #f48a17;
+}
+.text {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 158.2%;
+  letter-spacing: 0.04em;
+  color: rgba(28, 62, 95, 0.95);
+  padding-right: 50px !important;
 }
 </style>

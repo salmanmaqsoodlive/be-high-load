@@ -2,14 +2,16 @@
   <div>
     <Showcase />
     <div class="service-container">
-      <ServiceListComponent id="#service" />
-      <Projects />
+      <ServiceListComponent id="service" />
+      <Projects id="projects" />
+      <Career id="career" />
     </div>
   </div>
 </template>
 
 <script>
 import Projects from "@/components/ProjectsComponents/Projects.vue";
+import Career from "@/components/Career/Career.vue";
 import Showcase from "@/components/ServicesComponents/Showcase.vue";
 import ServiceListComponent from "@/components/ServicesComponents/ServicesListingComponent.vue";
 
@@ -19,6 +21,7 @@ export default {
     Showcase,
     ServiceListComponent,
     Projects,
+    Career,
   },
 };
 </script>

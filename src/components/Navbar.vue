@@ -12,12 +12,10 @@
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#service"> Services </b-nav-item>
-          <b-nav-item class="margin-left">
-            <router-link to="/projects">Projects</router-link>
+          <b-nav-item class="margin-left" href="#projects">
+            Projects
           </b-nav-item>
-          <b-nav-item class="margin-left">
-            <router-link to="/career">Career</router-link>
-          </b-nav-item>
+          <b-nav-item class="margin-left" href="#career"> Career </b-nav-item>
           <b-nav-item class="margin-left">
             <router-link to="/contact-us">Contact Us</router-link>
           </b-nav-item>
