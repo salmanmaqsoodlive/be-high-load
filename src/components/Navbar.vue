@@ -16,8 +16,8 @@
             Projects
           </b-nav-item>
           <b-nav-item class="margin-left" href="#career"> Career </b-nav-item>
-          <b-nav-item class="margin-left">
-            <router-link to="/contact-us">Contact Us</router-link>
+          <b-nav-item class="margin-left" href="#contact-us">
+            Contact Us
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>

@@ -15,7 +15,7 @@
     </div>
     <div class="row margin-t align-items-center">
       <div class="col-12 col-md-6">
-        <img
+        <div
           class="project-detail-img shadow"
           :style="`background-image: url(${image2});`"
         />
@@ -64,7 +64,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .margin-b {
   margin-bottom: 120px;
 }

@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .show-more-btn {
   background: #fafafa !important;
   border: 1px solid #f48a17 !important;
