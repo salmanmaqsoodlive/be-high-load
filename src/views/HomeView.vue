@@ -6,6 +6,7 @@
       <Projects id="projects" />
       <Career id="career" />
       <ContactUs id="contact-us" />
+      <Footer />
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Career from "@/components/Career/Career.vue";
 import Showcase from "@/components/ServicesComponents/Showcase.vue";
 import ServiceListComponent from "@/components/ServicesComponents/ServicesListingComponent.vue";
 import ContactUs from "@/components/ContactUsComponents/ContactUs.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "Services",
@@ -25,6 +27,7 @@ export default {
     Projects,
     Career,
     ContactUs,
+    Footer,
   },
 };
 </script>
