@@ -34,7 +34,9 @@
     </div>
     <div class="row justify-content-center mt-5 mb-5">
       <div class="col-2 text-center">
-        <button class="shadow show-more-btn">Show More</button>
+        <button class="shadow show-more-btn">
+          <router-link to="/career"> Show More </router-link>
+        </button>
       </div>
     </div>
   </div>
@@ -58,7 +60,9 @@ export default {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   padding: 12px 27px;
-  color: #f48a17;
+}
+.show-more-btn > a {
+  color: #f48a17 !important;
 }
 .margin-b {
   margin-bottom: 120px;

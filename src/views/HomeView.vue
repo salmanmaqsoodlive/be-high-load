@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Navbar color="#1c3e5f" :logo="logo" />
     <Showcase />
     <div class="service-container">
       <ServiceListComponent id="service" />
@@ -12,12 +13,14 @@
 </template>
 
 <script>
+import Navbar from "@/components/Navbar.vue";
 import Projects from "@/components/ProjectsComponents/Projects.vue";
 import Career from "@/components/Career/Career.vue";
 import Showcase from "@/components/ServicesComponents/Showcase.vue";
 import ServiceListComponent from "@/components/ServicesComponents/ServicesListingComponent.vue";
 import ContactUs from "@/components/ContactUsComponents/ContactUs.vue";
 import Footer from "@/components/Footer.vue";
+import logo from "../assets/company.png";
 
 export default {
   name: "Services",
@@ -27,7 +30,13 @@ export default {
     Projects,
     Career,
     ContactUs,
+    Navbar,
     Footer,
+  },
+  data() {
+    return {
+      logo,
+    };
   },
 };
 </script>

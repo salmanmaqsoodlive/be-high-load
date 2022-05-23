@@ -11,12 +11,28 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#service"> Services </b-nav-item>
-          <b-nav-item class="margin-left" href="#projects">
+          <b-nav-item href="#service" :style="{ color: color }">
+            <router-link to="/"> Services </router-link>
+          </b-nav-item>
+          <b-nav-item
+            class="margin-left"
+            href="#projects"
+            :style="{ color: color }"
+          >
             Projects
           </b-nav-item>
-          <b-nav-item class="margin-left" href="#career"> Career </b-nav-item>
-          <b-nav-item class="margin-left" href="#contact-us">
+          <b-nav-item
+            class="margin-left"
+            href="#career"
+            :style="{ color: color }"
+          >
+            Career
+          </b-nav-item>
+          <b-nav-item
+            class="margin-left"
+            href="#contact-us"
+            :style="{ color: color }"
+          >
             Contact Us
           </b-nav-item>
         </b-navbar-nav>
@@ -26,23 +42,39 @@
 </template>
 
 <script>
-import company from "@/assets/company.png";
 import Showcase from "@/components/ServicesComponents/Showcase.vue";
 export default {
   name: "Navbar",
+  props: ["color", "logo"],
   components: {
     Showcase,
   },
   data() {
     return {
-      logo: company,
+      color: color,
     };
+  },
+  computed: {
+    cssVars() {
+      return {
+        /* variables you want to pass to css */
+        "--color": this.color,
+      };
+    },
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.test {
+  /* display: flex; */
+  position: fixed !important ;
+  top: 0;
+}
+.nav-item > a {
+  color: var(--color) !important;
+}
 .margin-left {
   margin-left: 40px !important;
 }
