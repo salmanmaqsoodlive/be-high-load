@@ -1,14 +1,14 @@
 <template>
   <div class="career-card">
     <div class="row padding">
-      <div class="col-9">
+      <div class="col-10">
         <p class="title">{{ title }}</p>
         <div class="row mt-5">
           <p class="col-5 salary">{{ salary }}</p>
           <p class="col-6 job-type">{{ jobType }}</p>
         </div>
       </div>
-      <div class="col-3 d-flex align-items-center justify-content-center">
+      <div class="col-2 d-flex align-items-center justify-content-center">
         <img src="@/assets/arrow_forward_ios_24px.png" />
       </div>
     </div>

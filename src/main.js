@@ -4,6 +4,14 @@ import router from "./router";
 import store from "./store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapVue from "bootstrap-vue";
+import Axios from "axios";
+import "vue-loaders/dist/vue-loaders.css";
+import VueLoaders from "vue-loaders";
+
+Vue.use(VueLoaders);
+
+Vue.prototype.$axios = Axios;
+Axios.defaults.baseURL = "http://localhost:8080";
 
 Vue.use(BootstrapVue);
 

@@ -49,11 +49,7 @@ export default {
   components: {
     Showcase,
   },
-  data() {
-    return {
-      color: color,
-    };
-  },
+
   computed: {
     cssVars() {
       return {
