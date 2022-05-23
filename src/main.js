@@ -11,7 +11,7 @@ import VueLoaders from "vue-loaders";
 Vue.use(VueLoaders);
 
 Vue.prototype.$axios = Axios;
-Axios.defaults.baseURL = "http://localhost:8080";
+Axios.defaults.baseURL = "https://behighload.azurewebsites.net";
 
 Vue.use(BootstrapVue);
 
