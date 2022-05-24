@@ -126,6 +126,7 @@
 }
 .form-control:focus {
   border-color: #f48a17;
+  padding-top: 10px;
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(244, 137, 23, 0.393);
 }

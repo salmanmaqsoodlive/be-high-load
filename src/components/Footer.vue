@@ -11,10 +11,26 @@
         <div class="d-flex col-sm-6 col-12 justify-content-between mb-5">
           <div class="col-4">
             <p class="heading">Pages</p>
-            <a class="nav-link-title" href="#service">Services</a>
-            <a class="nav-link-title" href="#projects">Projects</a>
-            <a class="nav-link-title" href="#career">Career</a>
-            <a class="nav-link-title" href="#contact-us">Contact Us</a>
+            <router-link
+              class="nav-link-title"
+              :to="{ path: '/', hash: '#service' }"
+              >Services</router-link
+            >
+            <router-link
+              class="nav-link-title"
+              :to="{ path: '/', hash: '#projects' }"
+              >Projects</router-link
+            >
+            <router-link
+              class="nav-link-title"
+              :to="{ path: '/', hash: '#career' }"
+              >Career</router-link
+            >
+            <router-link
+              class="nav-link-title"
+              :to="{ path: '/', hash: '#contact-us' }"
+              >Contact Us</router-link
+            >
           </div>
           <div class="col-4">
             <p class="heading">Contact Us</p>

@@ -9,12 +9,18 @@
         class="d-block text-center"
       />
       <div class="row" v-else>
-        <div class="col-sm-6 col-12 margin-b" v-for="vacancy in vacancies">
-          <CareerCard
-            :title="vacancy.title"
-            :salary="vacancy.salary"
-            :jobType="vacancy.type"
-          />
+        <div
+          class="col-sm-6 col-12 margin-b"
+          style="cursor: pointer"
+          v-for="vacancy in vacancies"
+        >
+          <router-link :to="`/career/${vacancy.id}`">
+            <CareerCard
+              :title="vacancy.title"
+              :salary="vacancy.salary"
+              :jobType="vacancy.type"
+            />
+          </router-link>
         </div>
       </div>
     </div>
@@ -45,6 +51,9 @@ export default {
       this.vacancies = data;
       this.loading = false;
     },
+    // vacancyCardClicked(vacancy) {
+    //   console.log(vacancy);
+    // },
   },
 };
 </script>

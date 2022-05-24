@@ -1,6 +1,6 @@
 <template>
   <!-- <Showcase /> -->
-  <b-navbar toggleable="lg mt-3" class="mobile-nav">
+  <b-navbar id="mynav" toggleable="lg mt-3" class="mobile-nav sticky-top">
     <b-container>
       <b-navbar-brand class="col-6">
         <router-link to="/">
@@ -11,29 +11,25 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#service" :style="{ color: color }">
-            <router-link to="/"> Services </router-link>
+          <b-nav-item :style="{ color: color }">
+            <router-link :to="{ path: '/', hash: '#service' }">
+              Services
+            </router-link>
           </b-nav-item>
-          <b-nav-item
-            class="margin-left"
-            href="#projects"
-            :style="{ color: color }"
-          >
-            Projects
+          <b-nav-item class="margin-left" :style="{ color: color }">
+            <router-link :to="{ path: '/', hash: '#projects' }"
+              >Projects</router-link
+            >
           </b-nav-item>
-          <b-nav-item
-            class="margin-left"
-            href="#career"
-            :style="{ color: color }"
-          >
-            Career
+          <b-nav-item class="margin-left" :style="{ color: color }">
+            <router-link :to="{ path: '/', hash: '#career' }"
+              >Career</router-link
+            >
           </b-nav-item>
-          <b-nav-item
-            class="margin-left"
-            href="#contact-us"
-            :style="{ color: color }"
-          >
-            Contact Us
+          <b-nav-item class="margin-left" :style="{ color: color }">
+            <router-link :to="{ path: '/', hash: '#contact-us' }"
+              >Contact Us</router-link
+            >
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>
@@ -50,6 +46,21 @@ export default {
     Showcase,
   },
 
+  mounted() {
+    var myNav = document.getElementById("mynav");
+    window.onscroll = function () {
+      if (
+        document.body.scrollTop >= 100 ||
+        document.documentElement.scrollTop >= 100
+      ) {
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+      } else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+      }
+    };
+  },
   computed: {
     cssVars() {
       return {
@@ -68,7 +79,7 @@ export default {
   position: fixed !important ;
   top: 0;
 }
-.nav-item > a {
+a {
   color: var(--color) !important;
 }
 .margin-left {
@@ -76,6 +87,12 @@ export default {
 }
 .mobile-nav {
   background-color: rgba(0, 0, 0, 0);
+}
+.nav-colored {
+  background-color: rgba(234, 234, 234, 0.773) !important;
+}
+.nav-transparent {
+  background-color: transparent;
 }
 @media only screen and (max-width: 991px) {
   .mobile-nav {

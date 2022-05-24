@@ -3,40 +3,25 @@
     <p class="project-paragraph">Join our team</p>
     <h1 class="project-heading margin-b">Boost your career with us</h1>
     <div class="row justify-content-between">
-      <div class="col-md-6 col-12 mb-5">
-        <CareerCard
-          title="Mid React developer"
-          salary="salary"
-          jobType="Remote/Hybrid"
-        />
-      </div>
-      <div class="col-md-6 col-12 mb-5">
-        <CareerCard
-          title="PHP developer"
-          salary="salary"
-          jobType="Remote/Hybrid"
-        />
-      </div>
-      <div class="col-md-6 col-12 mb-5">
-        <CareerCard
-          title="JavaScript developer"
-          salary="salary"
-          jobType="Remote/Hybrid"
-        />
-      </div>
-      <div class="col-md-6 col-12 mb-5">
-        <CareerCard
-          title="Business Analyst"
-          salary="salary"
-          jobType="Remote/Hybrid"
-        />
+      <div
+        class="col-sm-6 col-12 mb-5"
+        style="cursor: pointer"
+        v-for="vacancy in vacancies"
+      >
+        <router-link :to="`/career/${vacancy.id}`">
+          <CareerCard
+            :title="vacancy.title"
+            :salary="vacancy.salary"
+            :jobType="vacancy.type"
+          />
+        </router-link>
       </div>
     </div>
     <div class="row justify-content-center mt-5 mb-5">
       <div class="col-2 text-center">
-        <button class="shadow show-more-btn">
-          <router-link to="/career"> Show More </router-link>
-        </button>
+        <router-link to="/career">
+          <button class="shadow show-more-btn">Show More</button>
+        </router-link>
       </div>
     </div>
   </div>
@@ -47,6 +32,20 @@ import CareerCard from "@/components/Career/CareerCard.vue";
 export default {
   components: {
     CareerCard,
+  },
+  data() {
+    return {
+      vacancies: [],
+    };
+  },
+  mounted() {
+    this.getHomePageVacancies();
+  },
+  methods: {
+    async getHomePageVacancies() {
+      const { data } = await this.$axios.get("/Vacancies/vacancies-main-page");
+      this.vacancies = data;
+    },
   },
 };
 </script>
@@ -60,6 +59,7 @@ export default {
   letter-spacing: 0.05em;
   text-transform: capitalize;
   padding: 12px 27px;
+  color: #f48a17 !important;
 }
 .show-more-btn > a {
   color: #f48a17 !important;
