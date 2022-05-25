@@ -1,6 +1,6 @@
 <template>
   <!-- <Showcase /> -->
-  <b-navbar id="mynav" toggleable="lg mt-3" class="mobile-nav sticky-top">
+  <b-navbar id="mynav" toggleable="lg" class="mobile-nav sticky-top">
     <b-container>
       <b-navbar-brand class="col-6">
         <router-link to="/">
@@ -11,22 +11,22 @@
 
       <b-collapse id="navbar-toggle-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item :style="{ color: color }">
+          <b-nav-item class="links" :style="{ color: color }">
             <router-link :to="{ path: '/', hash: '#service' }">
               Services
             </router-link>
           </b-nav-item>
-          <b-nav-item class="margin-left" :style="{ color: color }">
+          <b-nav-item class="margin-left links" :style="{ color: color }">
             <router-link :to="{ path: '/', hash: '#projects' }"
               >Projects</router-link
             >
           </b-nav-item>
-          <b-nav-item class="margin-left" :style="{ color: color }">
+          <b-nav-item class="margin-left links" :style="{ color: color }">
             <router-link :to="{ path: '/', hash: '#career' }"
               >Career</router-link
             >
           </b-nav-item>
-          <b-nav-item class="margin-left" :style="{ color: color }">
+          <b-nav-item class="margin-left links" :style="{ color: color }">
             <router-link :to="{ path: '/', hash: '#contact-us' }"
               >Contact Us</router-link
             >
@@ -48,7 +48,17 @@ export default {
 
   mounted() {
     var myNav = document.getElementById("mynav");
-    window.onscroll = function () {
+    // window.addEventListener("scroll", this.activeMenu());
+    window.onscroll = () => {
+      const links = document.querySelectorAll("li");
+      console.log("links ", links);
+      const section = document.querySelectorAll(".section1");
+      console.log("running", section);
+      let len = section.length;
+
+      while (--len && window.scrollY - 597 < section[len].offsetTop) {}
+      links.forEach((ltx) => ltx.classList.remove("active"));
+      links[len].classList.add("active");
       if (
         document.body.scrollTop >= 100 ||
         document.documentElement.scrollTop >= 100
@@ -60,6 +70,10 @@ export default {
         myNav.classList.remove("nav-colored");
       }
     };
+    // window.onscroll = () => {
+    //   console.log("running");
+    //
+    // };
   },
   computed: {
     cssVars() {
@@ -69,6 +83,21 @@ export default {
       };
     },
   },
+  methods: {
+    async activeMenu() {
+      const links = document.querySelectorAll("li");
+      console.log("links ", links);
+      const section = document.querySelectorAll(".section1");
+      console.log("running", section);
+      let len = section.length;
+
+      while (--len && window.scrollY + 97 < section[len].offsetTop) {}
+      links.forEach((ltx) => ltx.classList.remove("router-link-exact-active"));
+      links.forEach((ltx) => ltx.classList.remove("router-link-active"));
+
+      links[len].classList.add("router-link-exact-active");
+    },
+  },
 };
 </script>
 
@@ -76,8 +105,15 @@ export default {
 <style scoped>
 .test {
   /* display: flex; */
-  position: fixed !important ;
+}
+.active {
+  color: #f48a17 !important;
+}
+#mynav {
   top: 0;
+  position: fixed !important ;
+  /* position: absolute; */
+  width: 100%;
 }
 a {
   color: var(--color) !important;

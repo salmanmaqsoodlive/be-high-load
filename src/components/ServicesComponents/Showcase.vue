@@ -10,7 +10,9 @@
             Built with honesty, integrity & quality.
           </p>
           <button class="contact-us-btn">
-            <router-link to="/about">Contact Us</router-link>
+            <router-link :to="{ path: '/', hash: '#contact-us' }"
+              >Contact Us</router-link
+            >
           </button>
         </div>
       </div>
@@ -69,7 +71,7 @@ a {
 }
 
 .showcase {
-  position: absolute;
+  /* position: absolute; */
   width: 100vw;
   z-index: -9999;
   height: 1200px !important;

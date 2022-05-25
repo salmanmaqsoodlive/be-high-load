@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!-- <Navbar /> -->
-    <router-view />
+    <router-view style="height: 100vh" />
     <!-- <Footer id="footer" /> -->
   </div>
 </template>
@@ -46,10 +46,10 @@ a {
   color: #f48a17 !important;
 }
 
-.router-link-active {
+/* .router-link-active {
   color: #f48a17 !important;
 }
 .nav-item a.router-link-exact-active {
   color: #f48a17 !important;
-}
+} */
 </style>

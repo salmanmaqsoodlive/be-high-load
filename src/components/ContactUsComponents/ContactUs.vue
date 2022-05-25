@@ -1,5 +1,6 @@
 <template>
   <div class="container margin-t">
+    <span class="anchor" id="test"></span>
     <p class="paragraph">Get in touch</p>
     <h1 class="heading margin-b">Contact us</h1>
     <div class="row justify-content-between align-items-center">
@@ -42,6 +43,12 @@
 </template>
 
 <style scoped>
+.anchor {
+  display: block !important;
+  height: 92px;
+  margin-top: -92px !important;
+  visibility: hidden !important;
+}
 .contact-paragraph {
   font-family: "Nunito";
   font-style: normal;
@@ -118,6 +125,8 @@
 .form-control {
   padding: 0;
   padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 5px;
   border: none;
   border-bottom: 1px solid rgba(28, 62, 95, 0.5);
   transform: rotate(0.16deg);
@@ -126,7 +135,8 @@
 }
 .form-control:focus {
   border-color: #f48a17;
-  padding-top: 10px;
+  /* padding-top: 10px;
+  padding-left: 10px; */
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(244, 137, 23, 0.393);
 }

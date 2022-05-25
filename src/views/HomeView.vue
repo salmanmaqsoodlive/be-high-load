@@ -1,12 +1,13 @@
 <template>
   <div>
-    <Navbar color="#1c3e5f" :logo="logo" />
     <Showcase />
+    <Navbar color="#1c3e5f" :logo="logo" />
+
     <div class="service-container">
-      <ServiceListComponent id="service" />
-      <Projects id="projects" />
-      <Career id="career" />
-      <ContactUs id="contact-us" />
+      <ServiceListComponent id="service" class="section1" />
+      <Projects id="projects" class="section1" />
+      <Career id="career" class="section1" />
+      <ContactUs id="contact-us" class="section1" />
       <Footer />
     </div>
   </div>
@@ -21,6 +22,8 @@ import ServiceListComponent from "@/components/ServicesComponents/ServicesListin
 import ContactUs from "@/components/ContactUsComponents/ContactUs.vue";
 import Footer from "@/components/Footer.vue";
 import logo from "../assets/company.png";
+const links = document.querySelectorAll(".links");
+const section = document.querySelectorAll(".section1");
 
 export default {
   name: "Services",
@@ -38,18 +41,32 @@ export default {
       logo,
     };
   },
+  mounted() {
+    // setTimeout(() => {
+    // window.addEventListener("scroll", this.activeMenu());
+    // }, 2000);
+  },
+  methods: {
+    activeMenu() {
+      console.log(section);
+      let len = section.length;
+      // while (--len && window.scrollY + 97 < section[len].offsetTop) {}
+      links.forEach((ltx) => ltx.classList.remove("active"));
+      links[len].classList.add("active");
+    },
+  },
 };
 </script>
 
 <style scoped>
 .service-container {
   position: relative !important;
-  top: 750px !important;
+  top: -300px !important;
 }
 @media only screen and (max-width: 750px) {
   .service-container {
     position: relative !important;
-    top: 250px !important;
+    top: -250px !important;
   }
 }
 </style>

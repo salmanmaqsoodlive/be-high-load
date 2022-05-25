@@ -1,5 +1,6 @@
 <template>
   <div class="container margin-t">
+    <span class="anchor" id="test"></span>
     <p class="project-paragraph">Join our team</p>
     <h1 class="project-heading margin-b">Boost your career with us</h1>
     <div class="row justify-content-between">
@@ -51,6 +52,12 @@ export default {
 </script>
 
 <style scoped>
+.anchor {
+  display: block !important;
+  height: 92px;
+  margin-top: -92px !important;
+  visibility: hidden !important;
+}
 .show-more-btn {
   background: #fafafa !important;
   border: 1px solid #f48a17 !important;

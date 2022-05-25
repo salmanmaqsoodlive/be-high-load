@@ -1,5 +1,6 @@
 <template>
   <div class="container margin-t">
+    <span class="anchor" id="test"></span>
     <p class="project-paragraph">Work completed</p>
     <h1 class="project-heading margin-b">Our projects showcase</h1>
     <div class="row justify-content-between">
@@ -65,6 +66,12 @@ export default {
 </script>
 
 <style scoped>
+.anchor {
+  display: block !important;
+  height: 92px;
+  margin-top: -92px !important;
+  visibility: hidden !important;
+}
 .margin-b {
   margin-bottom: 120px;
 }

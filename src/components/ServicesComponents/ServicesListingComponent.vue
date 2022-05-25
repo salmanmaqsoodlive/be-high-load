@@ -1,6 +1,7 @@
 <template>
   <section>
     <div class="container">
+      <span class="anchor" id="test"></span>
       <p class="services-paragraph">Services list</p>
       <h1 class="services-heading">Explore what we offer</h1>
       <ServiceListLeft
@@ -48,6 +49,13 @@ export default {
 }
 .margin-t-1 {
   margin-top: 250px;
+}
+
+.anchor {
+  display: block !important;
+  height: 92px;
+  margin-top: -92px !important;
+  visibility: hidden !important;
 }
 
 .services-paragraph {
