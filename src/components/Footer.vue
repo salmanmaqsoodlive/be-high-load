@@ -43,7 +43,13 @@
           </div>
           <div class="col-4">
             <p class="heading">Privacy policy</p>
-            <p class="nav-link-title">Terms of service</p>
+            <p class="nav-link-title">
+              <router-link
+                class="nav-link-title"
+                :to="{ path: '/privacy-policy' }"
+                >Terms of service</router-link
+              >
+            </p>
             <p class="nav-link-title">Legal Use</p>
           </div>
         </div>

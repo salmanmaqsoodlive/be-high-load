@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import Career from "@/views/Career.vue";
 import VacancyDetails from "@/views/VacancyDetails.vue";
+import PrivacyPolicy from "@/views/PrivacyPolicy.vue";
 
 Vue.use(VueRouter);
 
@@ -22,6 +23,11 @@ const routes = [
     name: "VacancyDetails",
     props: true,
     component: VacancyDetails,
+  },
+  {
+    path: "/privacy-policy",
+    name: "privacyPolicy",
+    component: PrivacyPolicy,
   },
 ];
 

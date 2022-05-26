@@ -24,6 +24,21 @@ export default {
   },
   mounted() {
     this.getVacancies();
+    var myNav = document.getElementById("mynav");
+    console.log(myNav);
+    // window.addEventListener("scroll", this.activeMenu());
+    // window.onscroll = () => {
+    //   if (
+    //     document.body.scrollTop >= 100 ||
+    //     document.documentElement.scrollTop >= 100
+    //   ) {
+    //     myNav.classList.add("nav-colored");
+    //     myNav.classList.remove("nav-transparent");
+    //   } else {
+    //     myNav.classList.add("nav-transparent");
+    //     myNav.classList.remove("nav-colored");
+    //   }
+    // };
   },
   methods: {
     async getVacancies() {
@@ -36,3 +51,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.nav-colored {
+  background-color: rgba(234, 234, 234, 0.773) !important;
+}
+.nav-transparent {
+  background-color: transparent;
+}
+</style>

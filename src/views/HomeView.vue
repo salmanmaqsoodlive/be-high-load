@@ -41,11 +41,6 @@ export default {
       logo,
     };
   },
-  mounted() {
-    // setTimeout(() => {
-    // window.addEventListener("scroll", this.activeMenu());
-    // }, 2000);
-  },
   methods: {
     activeMenu() {
       console.log(section);

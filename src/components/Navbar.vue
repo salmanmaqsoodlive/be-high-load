@@ -53,10 +53,6 @@ export default {
       const links = document.querySelectorAll("li");
       const section = document.querySelectorAll(".section1");
       let len = section.length;
-
-      while (--len && window.scrollY - 597 < section[len].offsetTop) {}
-      links.forEach((ltx) => ltx.classList.remove("active"));
-      links[len].classList.add("active");
       if (
         document.body.scrollTop >= 100 ||
         document.documentElement.scrollTop >= 100
@@ -67,6 +63,11 @@ export default {
         myNav.classList.add("nav-transparent");
         myNav.classList.remove("nav-colored");
       }
+      // if (section.length > 0)
+
+      while (--len && window.scrollY - 597 < section[len].offsetTop) {}
+      links.forEach((ltx) => ltx.classList.remove("active"));
+      links[len].classList.add("active");
     };
   },
   computed: {
@@ -95,9 +96,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.test {
-  /* display: flex; */
-}
 .active {
   color: #f48a17 !important;
 }
