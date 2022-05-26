@@ -84,7 +84,7 @@
   margin-bottom: 55px !important;
 }
 .footer-container {
-  background-color: #193856 !important;
+  background-color: rgba(28, 62, 95, 0.95) !important;
   margin-top: 240px;
 }
 .tagline {

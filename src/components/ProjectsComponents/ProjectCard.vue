@@ -1,16 +1,18 @@
 <template>
   <div>
-    <div class="card shadow btn">
+    <div class="card shadow" id="project-card">
       <img class="card-img-top" alt="Card image cap" :src="src" />
       <div class="card-body p-4">
-        <p class="sub-heading mt-4">Category</p>
-        <h5 class="card-title mb-5">Project title</h5>
-        <p class="card-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </p>
+        <p class="sub-heading mt-4">{{ category }}</p>
+        <h5 class="card-title mb-5">{{ title }}</h5>
+        <p class="card-text">{{ tagline }}</p>
         <div class="row justify-content-center mt-4 pt-2">
           <div class="col-2 btn">
-            <img src="@/assets/arrow-down.png" style="width: 2rem" />
+            <img
+              src="@/assets/arrow-inactive.png"
+              style="width: 2rem"
+              class="arrow"
+            />
           </div>
         </div>
       </div>
@@ -21,7 +23,7 @@
 <script>
 export default {
   name: "ProjectCard",
-  props: ["src"],
+  props: ["src", "title", "category", "tagline"],
 };
 </script>
 <style scoped>
@@ -35,6 +37,7 @@ export default {
   color: rgba(28, 62, 95, 0.95);
 }
 .card {
+  cursor: pointer;
   /* width: 367px !important; */
   /* height: 564px !important; */
   background: #fafafa !important;

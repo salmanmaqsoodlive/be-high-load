@@ -51,9 +51,7 @@ export default {
     // window.addEventListener("scroll", this.activeMenu());
     window.onscroll = () => {
       const links = document.querySelectorAll("li");
-      console.log("links ", links);
       const section = document.querySelectorAll(".section1");
-      console.log("running", section);
       let len = section.length;
 
       while (--len && window.scrollY - 597 < section[len].offsetTop) {}
@@ -70,10 +68,6 @@ export default {
         myNav.classList.remove("nav-colored");
       }
     };
-    // window.onscroll = () => {
-    //   console.log("running");
-    //
-    // };
   },
   computed: {
     cssVars() {
@@ -86,9 +80,7 @@ export default {
   methods: {
     async activeMenu() {
       const links = document.querySelectorAll("li");
-      console.log("links ", links);
       const section = document.querySelectorAll(".section1");
-      console.log("running", section);
       let len = section.length;
 
       while (--len && window.scrollY + 97 < section[len].offsetTop) {}

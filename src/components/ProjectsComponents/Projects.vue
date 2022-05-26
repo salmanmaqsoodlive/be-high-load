@@ -4,21 +4,24 @@
     <p class="project-paragraph">Work completed</p>
     <h1 class="project-heading margin-b">Our projects showcase</h1>
     <div class="row justify-content-between">
-      <div class="col-sm-4 col-12 mb-sm-0 mb-5">
-        <ProjectCard :src="image1" />
-      </div>
-      <div class="col-sm-4 col-12 mb-sm-0 mb-5">
-        <ProjectCard :src="image2" />
-      </div>
-      <div class="col-sm-4 col-12 mb-sm-0 mb-5">
-        <ProjectCard :src="image3" />
+      <div
+        class="col-sm-4 col-12 mb-sm-0 mb-5"
+        v-for="(project, index) in projectsData"
+        @click="projectCardClicked(project, index)"
+      >
+        <ProjectCard
+          :src="image[index]"
+          :title="project.title"
+          :category="project.category"
+          :tagline="project.tagline"
+        />
       </div>
     </div>
     <div class="row margin-t align-items-center">
       <div class="col-12 col-md-6">
         <div
           class="project-detail-img shadow"
-          :style="`background-image: url(${image2});`"
+          :style="`background-image: url(${image[id]});`"
         />
       </div>
       <div class="col-12 col-md-6">
@@ -45,10 +48,13 @@
 </template>
 
 <script>
+import projectsData from "./projects.json";
 import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
-import image1 from "@/assets/pexels-fauxels-3184299 1.jpg";
+import image1 from "@/assets/image1.jpg";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
+import activeArrow from "@/assets/arrow-down.png";
+import inactiveArrow from "@/assets/arrow-inactive.png";
 
 export default {
   name: "Projects",
@@ -57,10 +63,34 @@ export default {
   },
   data() {
     return {
-      image1,
-      image2,
-      image3,
+      image: [image1, image2, image3],
+      projectsData,
+      id: 1,
+      activeArrow,
+      inactiveArrow,
+      // title:"",
+      // description:"",
+      // category
     };
+  },
+  mounted() {
+    this.selectedProject();
+  },
+  methods: {
+    projectCardClicked(project, index) {
+      this.selectedProject();
+      this.id = index;
+    },
+    selectedProject() {
+      const cardsImg = document.querySelectorAll(".arrow");
+      const cards = document.querySelectorAll("#project-card");
+      cards.forEach((ltx) => ltx.classList.remove("shadow-lg"));
+      cards.forEach((ltx) => ltx.classList.add("shadow"));
+      cardsImg.forEach((ltx) => (ltx.src = inactiveArrow));
+      cardsImg[this.id].src = activeArrow;
+      cards[this.id].classList.add("shadow-lg");
+      cards[this.id].classList.remove("shadow");
+    },
   },
 };
 </script>
