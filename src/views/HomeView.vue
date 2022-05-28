@@ -64,4 +64,38 @@ export default {
     top: -250px !important;
   }
 }
+@media only screen and (min-width: 1500px) {
+  .service-container {
+    position: relative !important;
+    top: -170px !important;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .service-container {
+    position: relative !important;
+    top: -170px !important;
+    /* background-color: red !important; */
+  }
+}
+@media only screen and (min-width: 1780px) {
+  .service-container {
+    position: relative !important;
+    top: -90px !important;
+    /* background-color: red !important; */
+  }
+}
+@media only screen and (min-width: 1940px) {
+  .service-container {
+    position: relative !important;
+    top: 10px !important;
+    /* background-color: red !important; */
+  }
+}
+@media only screen and (min-width: 2096px) {
+  .service-container {
+    position: relative !important;
+    top: 140px !important;
+    /* background-color: red !important; */
+  }
+}
 </style>

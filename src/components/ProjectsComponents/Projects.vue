@@ -78,18 +78,18 @@ export default {
   },
   methods: {
     projectCardClicked(project, index) {
-      this.selectedProject();
+      this.selectedProject(index);
       this.id = index;
     },
-    selectedProject() {
+    selectedProject(index = 1) {
       const cardsImg = document.querySelectorAll(".arrow");
       const cards = document.querySelectorAll("#project-card");
       cards.forEach((ltx) => ltx.classList.remove("shadow-lg"));
       cards.forEach((ltx) => ltx.classList.add("shadow"));
       cardsImg.forEach((ltx) => (ltx.src = inactiveArrow));
-      cardsImg[this.id].src = activeArrow;
-      cards[this.id].classList.add("shadow-lg");
-      cards[this.id].classList.remove("shadow");
+      cardsImg[index].src = activeArrow;
+      cards[index].classList.add("shadow-lg");
+      cards[index].classList.remove("shadow");
     },
   },
 };
