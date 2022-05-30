@@ -10,7 +10,9 @@
       />
       <div class="row" v-else>
         <div class="col-12 d-flex align-items-center">
-          <p class="salary paragraph-style">{{ vacancy.salary }}</p>
+          <p class="salary paragraph-style" v-if="vacancy.salary">
+            {{ vacancy.salary }}
+          </p>
           <p class="type paragraph-style">{{ vacancy.type }}</p>
         </div>
         <div class="col-12 d-flex align-items-center">
@@ -19,10 +21,10 @@
           </div>
 
           <div class="col-sm-4 col-12" style="text-align: right">
-            <img src="@/assets/vacancy.png" />
+            <img src="@/assets/vacancy.svg" />
           </div>
         </div>
-        <h1 class="heading my-5">Your duties</h1>
+        <h1 class="heading my-5" v-if="vacancy.duties">Your duties</h1>
         <div class="col-12 d-flex">
           <div class="col-sm-9 col-12">
             <p class="paragragh mb-4" v-for="duty in vacancy.duties">
@@ -34,7 +36,9 @@
 
         <div class="col-12 d-flex">
           <div class="col-sm-7 col-12">
-            <h1 class="heading my-5">Our expectations</h1>
+            <h1 class="heading my-5" v-if="vacancy.ourExpectations">
+              Our expectations
+            </h1>
             <p
               class="paragragh mb-4"
               v-for="expection in vacancy.ourExpectations"
@@ -43,7 +47,9 @@
             </p>
           </div>
           <div class="col-sm-5 col-12">
-            <h1 class="heading my-5">Nice-to-haves</h1>
+            <h1 class="heading my-5" v-if="vacancy.niceToHave">
+              Nice-to-haves
+            </h1>
             <p class="paragragh mb-4" v-for="text in vacancy.niceToHave">
               {{ text }}
             </p>

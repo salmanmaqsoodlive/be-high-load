@@ -4,7 +4,7 @@
     <b-container>
       <b-navbar-brand class="col-6">
         <router-link to="/">
-          <img :src="logo" width="195.5" />
+          <img :src="logo" width="195.5" id="logo" />
         </router-link>
       </b-navbar-brand>
       <b-navbar-toggle target="navbar-toggle-collapse"> </b-navbar-toggle>
@@ -39,15 +39,24 @@
 
 <script>
 import Showcase from "@/components/ServicesComponents/Showcase.vue";
+import darkLogo from "@/assets/company.svg";
+import whiteLogo from "@/assets/logo-white.svg";
 export default {
   name: "Navbar",
-  props: ["color", "logo"],
+  props: ["color", "logo", "page"],
+  data() {
+    return {
+      darkLogo,
+      whiteLogo,
+    };
+  },
   components: {
     Showcase,
   },
 
   mounted() {
     var myNav = document.getElementById("mynav");
+    var logo = document.getElementById("logo");
     // window.addEventListener("scroll", this.activeMenu());
     window.onscroll = () => {
       const links = document.querySelectorAll("li");
@@ -57,9 +66,18 @@ export default {
         document.body.scrollTop >= 100 ||
         document.documentElement.scrollTop >= 100
       ) {
+        logo.src = this.darkLogo;
+        this.color = "#1c3e5f";
         myNav.classList.add("nav-colored");
         myNav.classList.remove("nav-transparent");
       } else {
+        if (this.page === "main") {
+          this.color = "#1c3e5f";
+        } else {
+          this.color = "#fafafa";
+        }
+        logo.src = this.logo;
+
         myNav.classList.add("nav-transparent");
         myNav.classList.remove("nav-colored");
       }

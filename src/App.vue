@@ -2,6 +2,7 @@
   <div id="app">
     <!-- <Navbar /> -->
     <router-view style="height: 100vh" />
+    <Cookies id="cookies" />
     <!-- <Footer id="footer" /> -->
   </div>
 </template>
@@ -9,11 +10,13 @@
 <script>
 // @ is an alias to /src
 import Navbar from "@/components/Navbar.vue";
+import Cookies from "@/components/Cookies.vue";
 // import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
     Navbar,
+    Cookies,
     // Footer,
   },
 };
@@ -27,7 +30,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
 }
-
+#cookies {
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  background: #fafafa;
+  box-shadow: 0px -14px 35px rgba(122, 122, 122, 0.35);
+}
 a {
   text-decoration: none !important;
 }

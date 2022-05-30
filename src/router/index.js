@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import Career from "@/views/Career.vue";
 import VacancyDetails from "@/views/VacancyDetails.vue";
 import PrivacyPolicy from "@/views/PrivacyPolicy.vue";
+import Cookies from "@/views/Cookies.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +29,11 @@ const routes = [
     path: "/privacy-policy",
     name: "privacyPolicy",
     component: PrivacyPolicy,
+  },
+  {
+    path: "/cookies",
+    name: "cookies",
+    component: Cookies,
   },
 ];
 

@@ -1,22 +1,22 @@
 <template>
   <div>
     <Navbar color="#FAFAFA" :logo="logo" />
-    <Showcase title="Join our team" tagline="Boost your career with us." />
-    <OpenPostions />
+    <Showcase title="Cookies Policy" />
+    <CookiesPolicy />
   </div>
-  <!-- <h1>Career</h1> -->
 </template>
 
 <script>
 import Navbar from "@/components/Navbar.vue";
-import logo from "../assets/logo-white.svg";
 import Showcase from "@/components/Showcase.vue";
-import OpenPostions from "@/components/Career/OpenPositions.vue";
+import logo from "../assets/logo-white.svg";
+import CookiesPolicy from "@/components/Cookies/CookiesPolicy.vue";
+
 export default {
   components: {
     Showcase,
     Navbar,
-    OpenPostions,
+    CookiesPolicy,
   },
   data() {
     return {

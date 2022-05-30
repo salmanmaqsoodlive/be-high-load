@@ -4,12 +4,12 @@
       <div class="col-10">
         <p class="title">{{ title }}</p>
         <div class="row mt-5">
-          <p class="col-5 salary">{{ salary }}</p>
+          <p class="col-5 salary" v-if="salary">{{ salary }}</p>
           <p class="col-6 job-type">{{ jobType }}</p>
         </div>
       </div>
       <div class="col-2 d-flex align-items-center justify-content-center">
-        <img src="@/assets/arrow_forward_ios_24px.png" />
+        <img src="@/assets/arrow_forward_ios_24px.svg" />
       </div>
     </div>
   </div>
@@ -49,6 +49,7 @@ export default {
   /* Shadow */
   box-shadow: 0px 14px 35px rgba(43, 64, 54, 0.15);
   border-radius: 8px;
+  height: 257.59px !important;
 }
 .title {
   font-family: "Montserrat";

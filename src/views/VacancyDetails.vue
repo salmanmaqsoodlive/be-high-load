@@ -13,7 +13,7 @@
 import Navbar from "@/components/Navbar.vue";
 import Showcase from "@/components/Showcase.vue";
 import Vacancy from "@/components/Career/Vacancy.vue";
-import logo from "../assets/logo-white.png";
+import logo from "../assets/logo-white.svg";
 export default {
   components: { Navbar, Showcase, Vacancy },
   data() {

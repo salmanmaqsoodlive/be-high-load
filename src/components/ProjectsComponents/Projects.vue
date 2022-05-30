@@ -39,8 +39,8 @@
         </p>
         <p class="text mt-4">TECHNOLOGIES</p>
         <div class="col-12">
-          <img src="@/assets/physics 1.png" />
-          <img src="@/assets/html5 1.png" style="margin-left: 15px" />
+          <img src="@/assets/physics 1.svg" />
+          <img src="@/assets/html5 1.svg" style="margin-left: 15px" />
         </div>
       </div>
     </div>
@@ -53,8 +53,8 @@ import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
 import image1 from "@/assets/image1.jpg";
 import image2 from "@/assets/image2.png";
 import image3 from "@/assets/image3.png";
-import activeArrow from "@/assets/arrow-down.png";
-import inactiveArrow from "@/assets/arrow-inactive.png";
+import activeArrow from "@/assets/arrow-down.svg";
+import inactiveArrow from "@/assets/arrow-inactive.svg";
 
 export default {
   name: "Projects",
@@ -112,7 +112,7 @@ export default {
   border-radius: 8px;
   /* box-shadow: 2px 2px 10px 4px rgb(217, 217, 217); */
   height: 250px !important;
-  width: 356px !important;
+  max-width: 356px !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

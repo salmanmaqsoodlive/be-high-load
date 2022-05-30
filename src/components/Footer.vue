@@ -3,7 +3,7 @@
     <div class="container pt-4">
       <div class="row py-5">
         <div class="col-sm-6 col-12">
-          <div class="col-4">
+          <div class="col-7">
             <img src="@/assets/Logo-2.png" />
             <p class="tagline">Built with honesty, integrity & quality..</p>
           </div>
@@ -34,8 +34,10 @@
           </div>
           <div class="col-4">
             <p class="heading">Contact Us</p>
-            <p class="nav-link-title">info@chatapp.com</p>
-            <p class="nav-link-title">1-800-200-300</p>
+            <p class="nav-link-title" @click="sendEmail('email')">
+              info@chatapp.com
+            </p>
+            <p class="nav-link-title" @click="sendEmail('')">1-800-200-300</p>
             <p class="nav-link-title">
               Adama Branickiego 21 / U3, 02-927 Warsaw <br />
               Poland
@@ -62,6 +64,20 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    sendEmail(type) {
+      if (type === "email") {
+        window.open("mailto:info@chatapp.com");
+        return;
+      }
+      window.open("tel:1800200300", "_self");
+    },
+  },
+};
+</script>
 
 <style scoped>
 .nav-link-title {

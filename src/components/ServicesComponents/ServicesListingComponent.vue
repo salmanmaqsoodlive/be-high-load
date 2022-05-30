@@ -27,9 +27,9 @@
 </template>
 
 <script>
-import WebAppImage from "@/assets/web-dev-service.png";
-import ConsultImage from "@/assets/consult.png";
-import MobileImage from "@/assets/mobile-dev.png";
+import WebAppImage from "@/assets/web-dev-service.svg";
+import ConsultImage from "@/assets/consult.svg";
+import MobileImage from "@/assets/mobile-dev.svg";
 import ServiceListRight from "@/components/ServicesComponents/ServiceListRight.vue";
 import ServiceListLeft from "@/components/ServicesComponents/ServiceListLeft.vue";
 export default {

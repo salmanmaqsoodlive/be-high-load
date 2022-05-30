@@ -9,7 +9,7 @@
         <div class="row justify-content-center mt-4 pt-2">
           <div class="col-2 btn">
             <img
-              src="@/assets/arrow-inactive.png"
+              src="@/assets/arrow-inactive.svg"
               style="width: 2rem"
               class="arrow"
             />

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Showcase />
-    <Navbar color="#1c3e5f" :logo="logo" />
+    <Navbar color="#1c3e5f" :logo="logo" page="main" />
 
     <div class="service-container">
       <ServiceListComponent id="service" class="section1" />
@@ -21,7 +21,7 @@ import Showcase from "@/components/ServicesComponents/Showcase.vue";
 import ServiceListComponent from "@/components/ServicesComponents/ServicesListingComponent.vue";
 import ContactUs from "@/components/ContactUsComponents/ContactUs.vue";
 import Footer from "@/components/Footer.vue";
-import logo from "../assets/company.png";
+import logo from "../assets/company.svg";
 const links = document.querySelectorAll(".links");
 const section = document.querySelectorAll(".section1");
 

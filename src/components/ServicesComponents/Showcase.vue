@@ -77,6 +77,7 @@ a {
   height: 1200px !important;
   /* left: 0px; */
   top: 0px;
+  background-position-x: center !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
   background: linear-gradient(
