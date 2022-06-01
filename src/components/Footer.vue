@@ -2,57 +2,59 @@
   <div class="container-fluid footer-container">
     <div class="container pt-4">
       <div class="row py-5">
-        <div class="col-sm-6 col-12">
-          <div class="col-7">
+        <div class="col-md-6 col-12">
+          <div class="col-md-7 col-12">
             <img src="@/assets/Logo-2.png" />
             <p class="tagline">Built with honesty, integrity & quality..</p>
           </div>
         </div>
-        <div class="d-flex col-sm-6 col-12 justify-content-between mb-5">
-          <div class="col-4">
-            <p class="heading">Pages</p>
-            <router-link
-              class="nav-link-title"
-              :to="{ path: '/', hash: '#service' }"
-              >Services</router-link
-            >
-            <router-link
-              class="nav-link-title"
-              :to="{ path: '/', hash: '#projects' }"
-              >Projects</router-link
-            >
-            <router-link
-              class="nav-link-title"
-              :to="{ path: '/', hash: '#career' }"
-              >Career</router-link
-            >
-            <router-link
-              class="nav-link-title"
-              :to="{ path: '/', hash: '#contact-us' }"
-              >Contact Us</router-link
-            >
-          </div>
-          <div class="col-4">
-            <p class="heading">Contact Us</p>
-            <p class="nav-link-title" @click="sendEmail('email')">
-              info@chatapp.com
-            </p>
-            <p class="nav-link-title" @click="sendEmail('')">1-800-200-300</p>
-            <p class="nav-link-title">
-              Adama Branickiego 21 / U3, 02-927 Warsaw <br />
-              Poland
-            </p>
-          </div>
-          <div class="col-4">
-            <p class="heading">Privacy policy</p>
-            <p class="nav-link-title">
+        <div class="col-md-6 col-12 justify-content-between mb-5">
+          <div class="row">
+            <div class="col-md-4 col-12">
+              <p class="heading">Pages</p>
               <router-link
                 class="nav-link-title"
-                :to="{ path: '/privacy-policy' }"
-                >Terms of service</router-link
+                :to="{ path: '/', hash: '#service' }"
+                >Services</router-link
               >
-            </p>
-            <p class="nav-link-title">Legal Use</p>
+              <router-link
+                class="nav-link-title"
+                :to="{ path: '/', hash: '#projects' }"
+                >Projects</router-link
+              >
+              <router-link
+                class="nav-link-title"
+                :to="{ path: '/', hash: '#career' }"
+                >Career</router-link
+              >
+              <router-link
+                class="nav-link-title"
+                :to="{ path: '/', hash: '#contact-us' }"
+                >Contact Us</router-link
+              >
+            </div>
+            <div class="col-md-4 col-12">
+              <p class="heading">Contact Us</p>
+              <p class="nav-link-title" @click="sendEmail('email')">
+                info@chatapp.com
+              </p>
+              <p class="nav-link-title" @click="sendEmail('')">1-800-200-300</p>
+              <p class="nav-link-title">
+                Adama Branickiego 21 / U3, 02-927 Warsaw <br />
+                Poland
+              </p>
+            </div>
+            <div class="col-md-4 col-12">
+              <p class="heading">Privacy policy</p>
+              <p class="nav-link-title">
+                <router-link
+                  class="nav-link-title"
+                  :to="{ path: '/privacy-policy' }"
+                  >Terms of service</router-link
+                >
+              </p>
+              <p class="nav-link-title">Legal Use</p>
+            </div>
           </div>
         </div>
         <div class="col-12">
@@ -120,5 +122,15 @@ export default {
   letter-spacing: 0.02em;
   color: #fafafa;
   margin-top: 33px;
+}
+
+@media only screen and (max-width: 767px) {
+  .nav-link-title {
+    margin-bottom: 10px !important;
+  }
+  .heading {
+    margin-bottom: 12px !important;
+    margin-top: 22px !important;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="row d-flex align-items-center">
-    <div class="col-md-6 col-12">
+  <div class="row align-items-center">
+    <div class="col-md-6 col-12 mt-md-5 mt-0">
       <h1>{{ title }}</h1>
       <p class="mt-5">
         {{ description }}

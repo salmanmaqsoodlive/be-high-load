@@ -5,7 +5,7 @@
     <h1 class="project-heading margin-b">Boost your career with us</h1>
     <div class="row justify-content-between">
       <div
-        class="col-sm-6 col-12 mb-5"
+        class="col-md-6 col-12 mb-5"
         style="cursor: pointer"
         v-for="vacancy in vacancies"
       >
@@ -19,7 +19,7 @@
       </div>
     </div>
     <div class="row justify-content-center mt-5 mb-5">
-      <div class="col-2 text-center">
+      <div class="col-md-3 col-12 text-center">
         <router-link to="/career">
           <button class="shadow show-more-btn">Show More</button>
         </router-link>

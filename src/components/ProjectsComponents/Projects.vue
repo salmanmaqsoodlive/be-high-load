@@ -5,7 +5,7 @@
     <h1 class="project-heading margin-b">Our projects showcase</h1>
     <div class="row justify-content-between">
       <div
-        class="col-sm-4 col-12 mb-sm-0 mb-5"
+        class="col-md-4 col-12 mb-md-0 mb-5"
         v-for="(project, index) in projectsData"
         @click="projectCardClicked(project, index)"
       >
@@ -24,9 +24,13 @@
           :style="`background-image: url(${image[id]});`"
         />
       </div>
-      <div class="col-12 col-md-6">
-        <p class="sub-heading">Category</p>
-        <h5 class="card-title mb-5">Project title</h5>
+      <div class="col-md-6 col-12">
+        <p class="sub-heading mt-md-0 mt-5">
+          {{ project ? project.category : "Category" }}
+        </p>
+        <h5 class="card-title mb-5">
+          {{ project ? project.title : "Project title" }}
+        </h5>
         <p class="text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tellus
           id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum
@@ -66,6 +70,7 @@ export default {
       image: [image1, image2, image3],
       projectsData,
       id: 1,
+      project: {},
       activeArrow,
       inactiveArrow,
       // title:"",
@@ -78,6 +83,8 @@ export default {
   },
   methods: {
     projectCardClicked(project, index) {
+      console.log(project);
+      this.project = project;
       this.selectedProject(index);
       this.id = index;
     },
@@ -112,7 +119,7 @@ export default {
   border-radius: 8px;
   /* box-shadow: 2px 2px 10px 4px rgb(217, 217, 217); */
   height: 250px !important;
-  max-width: 356px !important;
+  /* max-width: 356px !important; */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -165,5 +172,11 @@ export default {
   letter-spacing: 0.04em;
   color: rgba(28, 62, 95, 0.95);
   padding-right: 50px !important;
+}
+
+@media only screen and (max-width: 767px) {
+  .margin-t {
+    margin-top: 100px !important;
+  }
 }
 </style>

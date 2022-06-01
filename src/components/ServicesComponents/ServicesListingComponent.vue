@@ -4,8 +4,14 @@
       <span class="anchor" id="test"></span>
       <p class="services-paragraph">Services list</p>
       <h1 class="services-heading">Explore what we offer</h1>
+      <ServiceListRight
+        class="margin-t d-md-none d-flex"
+        title="Web App Development"
+        description="Web app development services help design, build, and evolve web-based software."
+        :src="WebAppImage"
+      />
       <ServiceListLeft
-        class="margin-t"
+        class="margin-t d-md-flex d-none"
         title="Web App Development"
         description="Web app development services help design, build, and evolve web-based software."
         :src="WebAppImage"
@@ -16,8 +22,14 @@
         description="Mobile app development services help design, build, and evolve mobile-based solutions."
         :src="MobileImage"
       />
+      <ServiceListRight
+        class="margin-t-1 d-md-none d-flex"
+        title="Consultancy"
+        description="We provide personalized consulting services using our expertise and industry best practices to help our customers find the most profitable and efficient solution."
+        :src="ConsultImage"
+      />
       <ServiceListLeft
-        class="margin-t-1"
+        class="margin-t-1 d-md-flex d-none"
         title="Consultancy"
         description="We provide personalized consulting services using our expertise and industry best practices to help our customers find the most profitable and efficient solution."
         :src="ConsultImage"
@@ -77,5 +89,10 @@ export default {
   text-align: center;
   letter-spacing: 0.02em;
   color: rgba(28, 62, 95, 0.95);
+}
+@media only screen and (max-width: 767px) {
+  .margin-t-1 {
+    margin-top: 100px;
+  }
 }
 </style>

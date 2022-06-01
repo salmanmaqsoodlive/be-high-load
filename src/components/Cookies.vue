@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="container py-5 p-0">
       <div class="row align-items-center">
-        <div class="col-sm-10 col-12 p-sm-0 p-4">
+        <div class="col-md-9 col-12 p-sm-0 p-4">
           <p>
             We and selected third parties use cookies or similar technologies
             for technical purposes, to enhance site navigation, analyze site
@@ -17,7 +17,7 @@
             >
           </p>
         </div>
-        <div class="col-sm-2 col-12 mb-4">
+        <div class="col-md-3 col-12 mb-4">
           <button class="cookie-btn" @click="cookiesAcceptButtonClicked">
             Accept all
           </button>
@@ -101,5 +101,11 @@ p {
   line-height: 163.15%;
   letter-spacing: 0.02em;
   color: rgba(28, 62, 95, 0.95);
+}
+
+@media only screen and (max-width: 767px) {
+  .cookie-btn {
+    margin-left: 0px !important;
+  }
 }
 </style>

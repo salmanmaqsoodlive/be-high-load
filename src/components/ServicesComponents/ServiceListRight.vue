@@ -1,9 +1,9 @@
 <template>
-  <div class="row d-flex align-items-center">
-    <div class="col-md-6 col-12 image d-sm-block d-none">
+  <div class="row align-items-center">
+    <div class="col-md-6 col-12 image">
       <img :src="src" :width="348.21" />
     </div>
-    <div class="col-md-6 col-12">
+    <div class="col-md-6 col-12 margin-t">
       <h1>{{ title }}</h1>
       <p class="mt-5">
         {{ description }}
@@ -38,5 +38,11 @@ p {
   line-height: 174.2% !important;
   letter-spacing: 0.06em !important;
   color: rgba(28, 62, 95, 0.95);
+}
+
+@media only screen and (max-width: 767px) {
+  h1 {
+    margin-top: 40px !important;
+  }
 }
 </style>
