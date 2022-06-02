@@ -7,7 +7,7 @@
         <h5 class="card-title mb-5">{{ title }}</h5>
         <p class="card-text">{{ tagline }}</p>
         <div class="row justify-content-center mt-4 pt-2">
-          <div class="col-2 btn">
+          <div class="col-md-3 col-12 btn d-flex justify-content-center">
             <img
               src="@/assets/arrow-inactive.svg"
               style="width: 2rem"

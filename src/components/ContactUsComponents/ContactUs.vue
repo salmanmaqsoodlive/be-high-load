@@ -29,8 +29,18 @@
         <div class="map-card"></div>
         <div class="contact-details">
           <p class="contact-heading">Email</p>
-          <p class="contact-paragraph mb-md-5 mb-3">info@behighload.com</p>
+          <p
+            class="contact-paragraph mb-md-5 mb-3"
+            id="contact-email"
+            @click="sendEmail('email')"
+          >
+            info@behighload.com
+          </p>
           <p class="contact-heading mt-5">Phone</p>
+
+          <p class="contact-paragraph mb-md-5 mb-3" @click="sendEmail('')">
+            1-800-200-300
+          </p>
           <p class="contact-paragraph">
             Adama Branickiego<br />
             21 / U3, 02-972<br />
@@ -42,7 +52,26 @@
   </div>
 </template>
 
+<script>
+export default {
+  mounted() {},
+  methods: {
+    sendEmail(type) {
+      console.log("clicked");
+      if (type === "email") {
+        window.open("mailto:info@chatapp.com");
+        return;
+      }
+      window.open("tel:1800200300", "_self");
+    },
+  },
+};
+</script>
+
 <style scoped>
+.test {
+  cursor: pointer !important;
+}
 .anchor {
   display: block !important;
   height: 92px;
@@ -55,10 +84,8 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 163.15%;
-  /* or 29px */
 
-  display: flex;
-  align-items: center;
+  cursor: pointer !important;
   letter-spacing: 0.02em;
 
   /* White */
@@ -99,7 +126,7 @@
   position: relative;
   display: inline-block;
   left: 350px !important;
-  top: -385px;
+  top: -425px;
   z-index: 9999;
 }
 .map-card {
@@ -212,7 +239,7 @@
 @media only screen and (max-width: 820px) {
   .contact-details {
     left: 190px !important;
-    top: -295px;
+    top: -325px;
   }
   .map-card {
     position: relative;
@@ -530,7 +557,7 @@
     font-family: "Nunito";
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 163.15%;
     /* or 29px */
 

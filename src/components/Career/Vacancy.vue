@@ -8,24 +8,37 @@
         scale="2"
         class="d-block text-center"
       />
-      <div class="row" v-else>
-        <div class="col-12 d-flex align-items-center">
+      <template v-else>
+        <div class="d-flex align-items-center">
+          <!-- <div class="col-md-6"> -->
           <p class="salary paragraph-style" v-if="vacancy.salary">
             {{ vacancy.salary }}
           </p>
-          <p class="type paragraph-style">{{ vacancy.type }}</p>
+          <!-- </div> -->
+          <!-- <div class="col-md-6"> -->
+          <p class="type paragraph-style col-md-6">{{ vacancy.type }}</p>
+          <!-- </div> -->
         </div>
-        <div class="col-12 d-flex align-items-center">
-          <div class="col-sm-8 col-12 margin-t-1">
+        <div class="row align-items-center">
+          <div
+            class="col-md-4 col-12 d-md-none d-block"
+            style="text-align: center"
+          >
+            <img src="@/assets/vacancy.svg" />
+          </div>
+          <div class="col-md-8 col-12 margin-t-1">
             <p class="paragragh" v-html="vacancy.description"></p>
           </div>
 
-          <div class="col-sm-4 col-12" style="text-align: right">
+          <div
+            class="col-md-4 col-12 d-md-block d-none"
+            style="text-align: right"
+          >
             <img src="@/assets/vacancy.svg" />
           </div>
         </div>
         <h1 class="heading my-5" v-if="vacancy.duties">Your duties</h1>
-        <div class="col-12 d-flex">
+        <div class="row">
           <div class="col-sm-9 col-12">
             <p class="paragragh mb-4" v-for="duty in vacancy.duties">
               {{ duty }}
@@ -33,9 +46,8 @@
           </div>
           <div class="col-sm-3 col-12"></div>
         </div>
-
-        <div class="col-12 d-flex">
-          <div class="col-sm-7 col-12">
+        <div class="row">
+          <div class="col-md-7 col-12">
             <h1 class="heading my-5" v-if="vacancy.ourExpectations">
               Our expectations
             </h1>
@@ -46,7 +58,7 @@
               {{ expection }}
             </p>
           </div>
-          <div class="col-sm-5 col-12">
+          <div class="col-md-5 col-12">
             <h1 class="heading my-5" v-if="vacancy.niceToHave">
               Nice-to-haves
             </h1>
@@ -55,12 +67,14 @@
             </p>
           </div>
         </div>
-
-        <div class="col-sm-12 col-12 d-flex justify-content-center margin-t-1">
-          <button class="apply-now-btn margin-t-1">Apply Now!</button>
+        <div class="row justify-content-center margin-t-1">
+          <button class="apply-now-btn margin-t-1 col-md-4 col-12">
+            Apply Now!
+          </button>
         </div>
-      </div>
+      </template>
     </div>
+
     <Footer class="margin-t" />
   </section>
 </template>
