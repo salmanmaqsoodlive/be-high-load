@@ -5,7 +5,6 @@
       <p class="services-paragraph">Services list</p>
       <h1 class="services-heading">Explore what we offer</h1>
       <ServiceListRight
-        :smallScreen="true"
         class="margin-t d-md-none d-flex"
         title="Web App Development"
         description="Web app development services help design, build, and evolve web-based software."
@@ -17,20 +16,13 @@
         description="Web app development services help design, build, and evolve web-based software."
         :src="WebAppImage"
       />
-      <ServiceListLeft
-        class="margin-t-1 d-md-flex d-none"
+      <ServiceListRight
+        class="margin-t-1"
         title="Mobile App Development"
         description="Mobile app development services help design, build, and evolve mobile-based solutions."
         :src="MobileImage"
       />
       <ServiceListRight
-        class="margin-t-1 d-md-flex d-none"
-        title="Mobile App Development"
-        description="Mobile app development services help design, build, and evolve mobile-based solutions."
-        :src="MobileImage"
-      />
-      <ServiceListRight
-        :smallScreen="true"
         class="margin-t-1 d-md-none d-flex"
         title="Consultancy"
         description="We provide personalized consulting services using our expertise and industry best practices to help our customers find the most profitable and efficient solution."

@@ -1,7 +1,7 @@
 <template>
   <div class="row align-items-center">
     <div class="col-md-6 col-12 image">
-      <img :src="src" :width="smallScreen ? 200 : ''" />
+      <img :src="src" class="image-width" />
     </div>
     <div class="col-md-6 col-12 margin-t">
       <h1>{{ title }}</h1>
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  props: ["src", "title", "description", "smallScreen"],
+  props: ["src", "title", "description"],
 };
 </script>
 <style scoped>
@@ -43,6 +43,11 @@ p {
 @media only screen and (max-width: 767px) {
   h1 {
     margin-top: 40px !important;
+  }
+}
+@media only screen and (max-width: 714px) {
+  .image-width {
+    width: 290px !important;
   }
 }
 </style>
