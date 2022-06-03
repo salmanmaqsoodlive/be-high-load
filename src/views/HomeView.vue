@@ -56,12 +56,12 @@ export default {
 <style scoped>
 .service-container {
   position: relative !important;
-  top: -300px !important;
+  top: 180px !important;
 }
 @media only screen and (max-width: 750px) {
   .service-container {
     position: relative !important;
-    top: -250px !important;
+    top: 150px !important;
   }
 }
 @media only screen and (min-width: 1500px) {

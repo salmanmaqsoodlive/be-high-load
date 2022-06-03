@@ -6,6 +6,7 @@
 
     <div class="row justify-content-between">
       <carousel
+        :startPosition="1"
         :responsive="{
           0: { items: 1, nav: true },
           1000: { items: 3, nav: false },
@@ -61,6 +62,8 @@
 </template>
 
 <script>
+import nextBtn from "@/assets/next.svg";
+import prevBtn from "@/assets/prev.svg";
 import projectsData from "./projects.json";
 import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
 import image1 from "@/assets/image1.jpg";
@@ -83,21 +86,37 @@ export default {
       project: {},
       activeArrow,
       inactiveArrow,
+      nextBtn,
+      prevBtn,
       // title:"",
       // description:"",
       // category
     };
   },
   mounted() {
+    this.styleCarouselButtons();
     this.project = projectsData[0];
     this.selectedProject();
   },
   methods: {
     projectCardClicked(project, index) {
-      console.log(project);
       this.project = project;
       this.selectedProject(index);
       this.id = index;
+    },
+    styleCarouselButtons() {
+      const nav = document.getElementsByClassName("owl-nav");
+
+      nav[0].classList.add("row");
+      nav[0].classList.add("m-5");
+      nav[0].classList.add("justify-content-end");
+      nav[0].childNodes[0].classList.add("col-1");
+
+      nav[0].childNodes[0].classList.remove("owl-prev");
+      nav[0].childNodes[0].innerHTML = `<img src=${prevBtn}/>`;
+      nav[0].childNodes[1].classList.add("col-1");
+      nav[0].childNodes[1].classList.remove("owl-next");
+      nav[0].childNodes[1].innerHTML = `<img src=${nextBtn}/>`;
     },
     selectedProject(index = 1) {
       const cardsImg = document.querySelectorAll(".arrow");
@@ -120,6 +139,10 @@ export default {
   margin-top: -92px !important;
   visibility: hidden !important;
 }
+/* .nextBtn {
+  background-image: url("@/assets/next.svg") !important;
+  height: 50px !important;
+} */
 .margin-b {
   margin-bottom: 120px;
 }
