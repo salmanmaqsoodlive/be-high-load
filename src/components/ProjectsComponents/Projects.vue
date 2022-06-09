@@ -27,8 +27,11 @@
         </div>
       </carousel>
     </div>
-    <div class="row margin-t align-items-center">
-      <div class="col-12 col-md-6">
+    <div
+      v-if="clicked > 0"
+      class="row margin-t align-items-center justify-content-between"
+    >
+      <div class="col-12 col-md-5">
         <div
           class="project-detail-img shadow"
           :style="`background-image: url(${image[id]});`"
@@ -41,9 +44,7 @@
         <h5 class="card-title mb-5">
           {{ project.title }}
         </h5>
-        <p class="text">
-          {{ project.description }}
-        </p>
+        <p class="text" v-html="project.description"></p>
         <p class="text mt-4">TECHNOLOGIES</p>
         <div class="col-12">
           <img src="@/assets/physics 1.svg" />
@@ -80,6 +81,7 @@ export default {
       inactiveArrow,
       nextBtn,
       prevBtn,
+      clicked: 0,
       // title:"",
       // description:"",
       // category
@@ -87,11 +89,12 @@ export default {
   },
   mounted() {
     this.styleCarouselButtons();
-    this.project = projectsData[0];
-    this.selectedProject();
+    // this.project = projectsData[0];
+    // this.selectedProject();
   },
   methods: {
     projectCardClicked(project, index) {
+      this.clicked++;
       this.project = project;
       this.selectedProject(index);
       this.id = index;
@@ -105,10 +108,10 @@ export default {
       nav[0].childNodes[0].classList.add("col-1");
 
       nav[0].childNodes[0].classList.remove("owl-prev");
-      nav[0].childNodes[0].innerHTML = `<img src=${prevBtn}/>`;
+      nav[0].childNodes[0].innerHTML = `<img src='https://be-high-load.herokuapp.com/img/prev.196aea08.svg'/>`;
       nav[0].childNodes[1].classList.add("col-1");
       nav[0].childNodes[1].classList.remove("owl-next");
-      nav[0].childNodes[1].innerHTML = `<img src=${nextBtn}/>`;
+      nav[0].childNodes[1].innerHTML = `<img src='https://be-high-load.herokuapp.com/img/next.86df904f.svg'/>`;
     },
     selectedProject(index = 1) {
       const cardsImg = document.querySelectorAll(".arrow");

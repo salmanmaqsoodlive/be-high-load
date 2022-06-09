@@ -7,7 +7,9 @@
         <h5 class="card-title mb-5">{{ title }}</h5>
         <p class="card-text">{{ tagline }}</p>
         <div class="row justify-content-center mt-4 pt-2">
-          <div class="col-md-3 col-12 btn d-flex justify-content-center">
+          <div
+            class="col-md-3 col-12 btn d-flex mt-sm-0 mt-4 justify-content-center"
+          >
             <img
               src="@/assets/arrow-inactive.svg"
               style="width: 2rem"
@@ -35,6 +37,8 @@ export default {
   line-height: 158.2%;
   letter-spacing: 0.04em;
   color: rgba(28, 62, 95, 0.95);
+  height: 105px;
+  max-height: 105px;
 }
 .card {
   cursor: pointer;
@@ -43,8 +47,12 @@ export default {
   background: #fafafa !important;
   border-radius: 8px !important;
   border: none;
+  height: 650px !important;
+  max-height: 650px !important;
 }
 .card-img-top {
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 8px 8px 0 0 !important;
 }
 .card-title {

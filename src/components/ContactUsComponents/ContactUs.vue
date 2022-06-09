@@ -9,11 +9,13 @@
           id="input-small"
           placeholder="Name"
           type="text"
+          v-model="name"
         ></b-form-input>
         <b-form-input
           id="input-small"
           placeholder="Email"
           type="email"
+          v-model="email"
         ></b-form-input>
 
         <textarea
@@ -21,8 +23,23 @@
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="4"
+          v-model="message"
         ></textarea>
-        <button class="contact-us-btn shadow">Contact Us</button>
+        <button
+          v-if="!loading"
+          class="contact-us-btn shadow"
+          @click="contactUsButtonClicked()"
+        >
+          Contact Us
+        </button>
+        <button v-else class="contact-us-btn shadow">
+          <vue-loaders
+            name="ball-clip-rotate"
+            color="white"
+            scale="1"
+            class="d-flex justify-content-center"
+          />
+        </button>
       </div>
 
       <div class="col-md-6 col-12 back-card">
@@ -54,7 +71,14 @@
 
 <script>
 export default {
-  mounted() {},
+  data() {
+    return {
+      email: "",
+      name: "",
+      message: "",
+      loading: false,
+    };
+  },
   methods: {
     sendEmail(type) {
       console.log("clicked");
@@ -63,6 +87,21 @@ export default {
         return;
       }
       window.open("tel:1800200300", "_self");
+    },
+
+    async contactUsButtonClicked() {
+      try {
+        this.loading = true;
+        let payload = {
+          email: this.email,
+          name: this.name,
+          message: this.message,
+        };
+        await this.$axios.post("/Hello", payload);
+        this.loading = false;
+      } catch (error) {
+        console.log(error);
+      }
     },
   },
 };
@@ -121,6 +160,8 @@ export default {
   color: #fafafa;
   border: none;
   padding: 11px 28px;
+  width: 170px;
+  max-width: 170px;
 }
 .contact-details {
   position: relative;

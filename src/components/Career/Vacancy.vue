@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container margin-t">
+    <div class="container margin-t px-sm-0 px-5">
       <vue-loaders
         v-if="loading"
         name="ball-beat"
@@ -9,15 +9,15 @@
         class="d-block text-center"
       />
       <template v-else>
-        <div class="d-flex align-items-center">
-          <!-- <div class="col-md-6"> -->
-          <p class="salary paragraph-style" v-if="vacancy.salary">
-            {{ vacancy.salary }}
-          </p>
-          <!-- </div> -->
-          <!-- <div class="col-md-6"> -->
-          <p class="type paragraph-style col-md-6">{{ vacancy.type }}</p>
-          <!-- </div> -->
+        <div class="row d-flex align-items-center">
+          <div class="col-md-4 col-12">
+            <p class="salary paragraph-style" v-if="vacancy.salary">
+              {{ vacancy.salary }}
+            </p>
+          </div>
+          <div class="col-md-6 col-12">
+            <p class="type paragraph-style">{{ vacancy.type }}</p>
+          </div>
         </div>
         <div class="row align-items-center">
           <div
@@ -68,7 +68,10 @@
           </div>
         </div>
         <div class="row justify-content-center margin-t-1">
-          <button class="apply-now-btn margin-t-1 col-md-4 col-12">
+          <button
+            class="apply-now-btn margin-t-1 col-md-4 col-12"
+            @click="sendEmail()"
+          >
             Apply Now!
           </button>
         </div>
@@ -93,6 +96,11 @@ export default {
   },
   mounted() {
     this.loading = false;
+  },
+  methods: {
+    sendEmail(type) {
+      window.open("mailto:info@chatapp.com");
+    },
   },
 };
 </script>
@@ -164,7 +172,7 @@ export default {
 }
 .salary {
   color: #55a2a1;
-  margin-right: 200px;
+  /* margin-right: 200px; */
 }
 .type {
   color: rgba(28, 62, 95, 0.95) !important;
