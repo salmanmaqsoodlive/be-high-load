@@ -36,24 +36,37 @@
             <div class="col-md-4 col-12">
               <p class="heading">Contact Us</p>
               <p class="nav-link-title" @click="sendEmail('email')">
-                info@chatapp.com
+                hello@behighload.com
               </p>
-              <p class="nav-link-title" @click="sendEmail('')">1-800-200-300</p>
+              <p class="nav-link-title" @click="sendEmail('')">+48-574-429-116</p>
               <p class="nav-link-title">
                 Adama Branickiego 21 / U3, 02-927 Warsaw <br />
                 Poland
               </p>
             </div>
             <div class="col-md-4 col-12">
-              <p class="heading">Privacy policy</p>
+              <p class="heading">Agreements</p>
               <p class="nav-link-title">
                 <router-link
                   class="nav-link-title"
                   :to="{ path: '/privacy-policy' }"
-                  >Terms of service</router-link
+                  >Privacy Policy</router-link
                 >
               </p>
-              <p class="nav-link-title">Legal Use</p>
+              <p class="nav-link-title">
+                <router-link
+                    class="nav-link-title"
+                    :to="{ path: '/terms-and-conditions' }"
+                >Terms and Conditions</router-link
+                >
+              </p>
+              <p class="nav-link-title">
+                <router-link
+                    class="nav-link-title"
+                    :to="{ path: '/cookies' }"
+                >Cookie policy</router-link
+                >
+              </p>
             </div>
           </div>
         </div>

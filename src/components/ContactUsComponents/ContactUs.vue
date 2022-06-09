@@ -34,12 +34,12 @@
             id="contact-email"
             @click="sendEmail('email')"
           >
-            info@behighload.com
+            hello@behighload.com
           </p>
           <p class="contact-heading mt-5">Phone</p>
 
           <p class="contact-paragraph mb-md-5 mb-3" @click="sendEmail('')">
-            1-800-200-300
+            +48-574-429-116
           </p>
           <p class="contact-paragraph">
             Adama Branickiego<br />

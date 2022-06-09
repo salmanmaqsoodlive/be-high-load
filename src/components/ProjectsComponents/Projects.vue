@@ -36,20 +36,13 @@
       </div>
       <div class="col-md-6 col-12">
         <p class="sub-heading mt-md-0 mt-5">
-          {{ project ? project.category : "Category" }}
+          {{ project.category }}
         </p>
         <h5 class="card-title mb-5">
-          {{ project ? project.title : "Project title" }}
+          {{ project.title }}
         </h5>
         <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at tellus
-          id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum
-          primis in faucibus.
-        </p>
-        <p class="text mt-4">
-          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-          posuere cubilia curae; Integer hendrerit turpis id erat varius
-          fermentum.
+          {{ project.description }}
         </p>
         <p class="text mt-4">TECHNOLOGIES</p>
         <div class="col-12">
@@ -66,9 +59,8 @@ import nextBtn from "@/assets/next.svg";
 import prevBtn from "@/assets/prev.svg";
 import projectsData from "./projects.json";
 import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
-import image1 from "@/assets/image1.jpg";
-import image2 from "@/assets/image2.png";
-import image3 from "@/assets/image3.png";
+import image1 from "@/assets/Desktop-Main-Card.png";
+import image2 from "@/assets/MobileMainCard.png";
 import activeArrow from "@/assets/arrow-down.svg";
 import inactiveArrow from "@/assets/arrow-inactive.svg";
 import carousel from "vue-owl-carousel";
@@ -80,7 +72,7 @@ export default {
   },
   data() {
     return {
-      image: [image1, image2, image3],
+      image: [image1, image2],
       projectsData,
       id: 1,
       project: {},

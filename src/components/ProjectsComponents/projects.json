@@ -1,20 +1,14 @@
 [
   {
-    "category": "Category",
-    "title": "Project title",
-    "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed at tellus id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br/>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer hendrerit turpis id erat varius fermentum."
+    "category": "Health",
+    "title": "Medical Billing SaaS Platform",
+    "tagline": "SaaS billing platform for home health providers.",
+    "description": "The platform handles complicated rules and regulations in an easy, user-friendly service that includes management of contractor payrolls, and scheduling of payment to payers and clearinghouses."
   },
   {
-    "category": "Category",
-    "title": "Project title",
-    "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed at tellus id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br/>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer hendrerit turpis id erat varius fermentum."
-  },
-  {
-    "category": "Category",
-    "title": "Project title",
-    "tagline": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed at tellus id ligula ultrices posuere. Interdum et malesuada fames ac ante ipsum primis in faucibus.<br/>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer hendrerit turpis id erat varius fermentum."
+    "category": "Lifestyle",
+    "title": "Renting SaaS Platform",
+    "tagline": "On-line Business Platform and a great showcase for Fleet Owners to meet and interact with Drivers",
+    "description": "On-line Business Platform and a great showcase for Fleet Owners to meet and interact with Drivers regardless of where they are. Built-in chat allows staying in touch with owners and renters with expedition. The scheduling payment system made payments on time."
   }
 ]
