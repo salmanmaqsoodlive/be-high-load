@@ -3,7 +3,8 @@
     "category": "Health",
     "title": "Medical Billing SaaS Platform",
     "tagline": "SaaS billing platform for home health providers.",
-    "description": "The platform handles complicated rules and regulations in an easy, user-friendly service that includes management of contractor payrolls, and scheduling of payment to payers and clearinghouses."
+    "description": "The platform handles complicated rules and regulations in an easy, user-friendly service that includes management of contractor payrolls, and scheduling of payment to payers and clearinghouses.",
+    "techStack": ["@/assets/physics 1.svg"]
   },
   {
     "category": "Lifestyle",

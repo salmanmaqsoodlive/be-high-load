@@ -34,7 +34,7 @@
             class="col-md-4 col-12 d-md-block d-none"
             style="text-align: right"
           >
-            <img src="@/assets/vacancy.svg" />
+            <img src="@/assets/vacancy.svg" :width="255" />
           </div>
         </div>
         <h1 class="heading my-5" v-if="vacancy.duties">Your duties</h1>

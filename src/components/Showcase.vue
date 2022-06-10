@@ -2,6 +2,7 @@
   <div class="container-fluid showcase-bg">
     <div class="container">
       <h1 class="title">{{ title }}</h1>
+
       <p class="tagline">{{ tagline }}</p>
     </div>
   </div>
@@ -46,5 +47,30 @@ export default {
   background-image: url("../assets/showcase-bg-1.png");
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (max-width: 767px) {
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+
+    letter-spacing: 0.02em;
+    color: #fafafa;
+    margin-top: 110px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .title {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 49px;
+    letter-spacing: 0.01em;
+    color: #fafafa;
+    margin-top: 120px;
+  }
 }
 </style>

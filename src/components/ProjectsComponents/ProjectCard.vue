@@ -37,8 +37,8 @@ export default {
   line-height: 158.2%;
   letter-spacing: 0.04em;
   color: rgba(28, 62, 95, 0.95);
-  height: 105px;
-  max-height: 105px;
+  height: 135px;
+  max-height: 135px;
 }
 .card {
   cursor: pointer;
@@ -47,12 +47,12 @@ export default {
   background: #fafafa !important;
   border-radius: 8px !important;
   border: none;
-  height: 650px !important;
-  max-height: 650px !important;
+  /* height: 950px !important; */
+  /* max-height: 950px !important; */
 }
 .card-img-top {
-  max-height: 200px;
-  object-fit: cover;
+  /* max-height: 200px;
+  object-fit: cover; */
   border-radius: 8px 8px 0 0 !important;
 }
 .card-title {
@@ -63,6 +63,8 @@ export default {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: rgba(28, 62, 95, 0.95);
+  height: 50px;
+  max-height: 135px;
 }
 .sub-heading {
   font-family: "Nunito";

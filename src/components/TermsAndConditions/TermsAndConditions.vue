@@ -67,10 +67,10 @@
           <p>
             <strong>Website</strong> refers to beHighload, accessible from
             <a
-                href="https://behighload.com/"
-                rel="external nofollow noopener"
-                target="_blank"
-            >https://behighload.com/</a
+              href="https://behighload.com/"
+              rel="external nofollow noopener"
+              target="_blank"
+              >https://behighload.com/</a
             >
           </p>
         </li>
@@ -332,7 +332,27 @@ export default {
   color: rgba(28, 62, 95, 0.95);
   margin-bottom: 30px;
 }
+
+h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  /* font-weight: 600; */
+  font-size: 24px;
+  line-height: 41px;
+  letter-spacing: 0.03em;
+  color: rgba(28, 62, 95, 0.95);
+  margin-bottom: 30px;
+}
 .paragraph {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 163.15%;
+  letter-spacing: 0.02em;
+  color: rgba(28, 62, 95, 0.95);
+}
+p {
   font-family: "Nunito";
   font-style: normal;
   font-weight: 500;

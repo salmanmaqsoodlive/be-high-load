@@ -10,6 +10,7 @@
           placeholder="Name"
           type="text"
           v-model="name"
+          v-validate="{ required: true, min: 3 }"
         ></b-form-input>
         <b-form-input
           id="input-small"
@@ -70,6 +71,8 @@
 </template>
 
 <script>
+import { throws } from "assert";
+
 export default {
   data() {
     return {
@@ -81,7 +84,6 @@ export default {
   },
   methods: {
     sendEmail(type) {
-      console.log("clicked");
       if (type === "email") {
         window.open("mailto:info@chatapp.com");
         return;
@@ -89,7 +91,20 @@ export default {
       window.open("tel:1800200300", "_self");
     },
 
+    validateFeilds() {
+      if (this.email === "" || this.name === "" || this.message === "") {
+        return false;
+      }
+      return true;
+    },
+    validateEmail(email) {
+      var re = /\S+@\S+\.\S+/;
+      return re.test(email);
+    },
+
     async contactUsButtonClicked() {
+      if (!this.validateEmail(this.email)) return;
+      if (!this.validateFeilds()) return;
       try {
         this.loading = true;
         let payload = {
@@ -98,6 +113,9 @@ export default {
           message: this.message,
         };
         await this.$axios.post("/Hello", payload);
+        this.email = "";
+        this.name = "";
+        this.message = "";
         this.loading = false;
       } catch (error) {
         console.log(error);
