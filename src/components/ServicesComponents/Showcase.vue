@@ -130,12 +130,12 @@ a {
 
 @media only screen and (max-width: 425px) {
   .showcase {
-    height: 80vh !important;
+    height: 45vh !important;
   }
   .main-text {
     /* left: 85px; */
     top: 160px;
-    font-size: 20px !important;
+    font-size: 22px !important;
     width: 250px !important;
     /* width: 90% !important; */
     /* font-weight: 600; */
@@ -144,22 +144,22 @@ a {
   .secondary-text {
     top: 30px !important;
     width: 250px !important;
-    font-size: 11px !important;
+    font-size: 13px !important;
   }
   .contact-us-btn {
-    top: -165px !important;
+    top: -155px !important;
     padding: 6px 10px;
     font-size: 12px !important;
   }
 }
 @media only screen and (max-width: 375px) {
   .showcase {
-    height: 80vh !important;
+    height: 55vh !important;
   }
   .main-text {
     /* left: 85px; */
     top: 160px;
-    font-size: 20px !important;
+    font-size: 22px !important;
     width: 250px !important;
     /* width: 90% !important; */
     /* font-weight: 600; */
@@ -168,20 +168,20 @@ a {
   .secondary-text {
     top: 30px !important;
     width: 250px !important;
-    font-size: 11px !important;
+    font-size: 12.5px !important;
   }
   .contact-us-btn {
-    top: -165px !important;
+    top: -155px !important;
   }
 }
 @media only screen and (max-width: 320px) {
   .showcase {
-    height: 80vh !important;
+    height: 60vh !important;
   }
   .main-text {
     /* left: 85px; */
     top: 160px;
-    font-size: 20px !important;
+    font-size: 22px !important;
     width: 250px !important;
     /* width: 90% !important; */
     /* font-weight: 600; */
@@ -190,10 +190,10 @@ a {
   .secondary-text {
     top: 30px !important;
     width: 250px !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
   }
   .contact-us-btn {
-    top: -165px !important;
+    top: -155px !important;
   }
 }
 </style>
