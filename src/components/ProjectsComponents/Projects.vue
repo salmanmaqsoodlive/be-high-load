@@ -9,8 +9,9 @@
         :startPosition="1"
         :responsive="{
           0: { items: 1, nav: true },
-          1000: { items: 3, nav: false },
+          1000: { items: 4, nav: true },
         }"
+        :rewind="false"
         :dots="false"
       >
         <div

@@ -4,7 +4,7 @@
       <img class="card-img-top" alt="Card image cap" :src="src" />
       <div class="card-body p-4">
         <p class="sub-heading mt-4">{{ category }}</p>
-        <h5 class="card-title mb-5">{{ title }}</h5>
+        <h5 class="card-title mb-4">{{ title }}</h5>
         <p class="card-text">{{ tagline }}</p>
         <div class="row justify-content-center mt-4 pt-2">
           <div
@@ -37,8 +37,8 @@ export default {
   line-height: 158.2%;
   letter-spacing: 0.04em;
   color: rgba(28, 62, 95, 0.95);
-  height: 135px;
-  max-height: 135px;
+  height: 150px;
+  max-height: 155px;
 }
 .card {
   cursor: pointer;
@@ -63,8 +63,8 @@ export default {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: rgba(28, 62, 95, 0.95);
-  height: 50px;
-  max-height: 135px;
+  /* height: 50px;
+  max-height: 135px; */
 }
 .sub-heading {
   font-family: "Nunito";
@@ -74,5 +74,19 @@ export default {
   line-height: 174.2%;
   letter-spacing: 0.06em;
   color: #f48a17;
+}
+@media only screen and (max-width: 320px) {
+  .card-title {
+    /* height: 100px; */
+  }
+  .card-text {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 158.2%;
+    letter-spacing: 0.04em;
+    color: rgba(28, 62, 95, 0.95);
+    height: 135px;
+    max-height: 135px;
+  }
 }
 </style>
