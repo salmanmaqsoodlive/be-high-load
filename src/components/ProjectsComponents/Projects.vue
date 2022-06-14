@@ -6,7 +6,7 @@
 
     <div class="row justify-content-between">
       <carousel
-        :startPosition="1"
+        :startPosition="0"
         :responsive="{
           0: { items: 1, nav: true },
           1000: { items: 3, nav: true },
