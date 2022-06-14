@@ -77,10 +77,24 @@ export default {
     /* background-color: red !important; */
   }
 }
+@media only screen and (min-width: 1653px) {
+  .service-container {
+    position: relative !important;
+    top: 130px !important;
+    /* background-color: red !important; */
+  }
+}
 @media only screen and (min-width: 1780px) {
   .service-container {
     position: relative !important;
     top: -90px !important;
+    /* background-color: red !important; */
+  }
+}
+@media only screen and (min-width: 1827px) {
+  .service-container {
+    position: relative !important;
+    top: 120px !important;
     /* background-color: red !important; */
   }
 }
