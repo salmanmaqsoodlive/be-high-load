@@ -9,7 +9,7 @@
         :startPosition="1"
         :responsive="{
           0: { items: 1, nav: true },
-          1000: { items: 4, nav: true },
+          1000: { items: 3, nav: true },
         }"
         :rewind="false"
         :dots="false"
@@ -59,6 +59,7 @@
 <script>
 import nextBtn from "@/assets/next.svg";
 import prevBtn from "@/assets/prev.svg";
+import backBtn from "@/assets/back-arrow.svg";
 import projectsData from "./projects.json";
 import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
 import image1 from "@/assets/Desktop-Main-Card.png";
@@ -109,7 +110,7 @@ export default {
       nav[0].childNodes[0].classList.add("col-1");
 
       nav[0].childNodes[0].classList.remove("owl-prev");
-      nav[0].childNodes[0].innerHTML = `<img src='https://be-high-load.herokuapp.com/img/prev.196aea08.svg'/>`;
+      nav[0].childNodes[0].innerHTML = `<img src=${backBtn} class='p-1'/>`;
       nav[0].childNodes[1].classList.add("col-1");
       nav[0].childNodes[1].classList.remove("owl-next");
       nav[0].childNodes[1].innerHTML = `<img src='https://be-high-load.herokuapp.com/img/next.86df904f.svg'/>`;
