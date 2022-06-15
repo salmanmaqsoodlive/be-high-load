@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import nextBtn from "@/assets/next.svg";
+import nextBtn from "@/assets/next-arrow.svg";
 import prevBtn from "@/assets/prev.svg";
 import backBtn from "@/assets/back-arrow.svg";
 // import projectsData from "./projects.json";
@@ -138,10 +138,10 @@ export default {
       nav[0].childNodes[0].classList.add("col-1");
 
       nav[0].childNodes[0].classList.remove("owl-prev");
-      nav[0].childNodes[0].innerHTML = `<img src=${backBtn} class='p-1'/>`;
+      nav[0].childNodes[0].innerHTML = `<img src=${backBtn} />`;
       nav[0].childNodes[1].classList.add("col-1");
       nav[0].childNodes[1].classList.remove("owl-next");
-      nav[0].childNodes[1].innerHTML = `<img src=${nextBtn}/>`;
+      nav[0].childNodes[1].innerHTML = `<img src=${nextBtn} />`;
     },
     selectedProject(index = 1) {
       const cardsImg = document.querySelectorAll(".arrow");
