@@ -48,8 +48,12 @@
         <p class="text" v-html="project.description"></p>
         <p class="text mt-4">TECHNOLOGIES</p>
         <div class="col-12">
-          <img src="@/assets/physics 1.svg" />
-          <img src="@/assets/html5 1.svg" style="margin-left: 15px" />
+          <img
+            :src="technology"
+            v-for="technology in project.techStack"
+            style="margin-right: 20px"
+            :height="45"
+          />
         </div>
       </div>
     </div>
@@ -60,13 +64,18 @@
 import nextBtn from "@/assets/next.svg";
 import prevBtn from "@/assets/prev.svg";
 import backBtn from "@/assets/back-arrow.svg";
-import projectsData from "./projects.json";
+// import projectsData from "./projects.json";
 import ProjectCard from "@/components/ProjectsComponents/ProjectCard.vue";
 import image1 from "@/assets/Desktop-Main-Card.png";
 import image2 from "@/assets/MobileMainCard.png";
 import activeArrow from "@/assets/arrow-down.svg";
 import inactiveArrow from "@/assets/arrow-inactive.svg";
 import carousel from "vue-owl-carousel";
+import microsoftLogo from "@/assets/technologies/microsoft.svg";
+import xamarinLogo from "@/assets/technologies/xamarin.svg";
+import vuejsLogo from "@/assets/technologies/vuejs.svg";
+import netLogo from "@/assets/technologies/net-core.svg";
+
 export default {
   name: "Projects",
   components: {
@@ -76,7 +85,6 @@ export default {
   data() {
     return {
       image: [image1, image2],
-      projectsData,
       id: 1,
       project: {},
       activeArrow,
@@ -84,6 +92,26 @@ export default {
       nextBtn,
       prevBtn,
       clicked: 0,
+      projectsData: [
+        {
+          category: "Health",
+          title: "Medical Billing SaaS Platform",
+          tagline: "SaaS billing platform for home health providers.",
+          description:
+            "The platform handles complicated rules and regulations in an easy, user-friendly service that includes management of contractor payrolls, and scheduling of payment to payers and clearinghouses.",
+          techStack: [vuejsLogo, netLogo],
+        },
+        {
+          category: "Lifestyle",
+          title: "Renting SaaS Platform",
+          tagline:
+            "On-line Business Platform and a great showcase for Fleet Owners to meet and interact with Drivers",
+          description:
+            "On-line Business Platform and a great showcase for Fleet Owners to meet and interact with Drivers regardless of where they are. Built-in chat allows staying in touch with owners and renters with expedition. The scheduling payment system made payments on time.",
+          techStack: [netLogo, xamarinLogo, microsoftLogo],
+        },
+      ],
+
       // title:"",
       // description:"",
       // category
@@ -113,7 +141,7 @@ export default {
       nav[0].childNodes[0].innerHTML = `<img src=${backBtn} class='p-1'/>`;
       nav[0].childNodes[1].classList.add("col-1");
       nav[0].childNodes[1].classList.remove("owl-next");
-      nav[0].childNodes[1].innerHTML = `<img src='https://be-high-load.herokuapp.com/img/next.86df904f.svg'/>`;
+      nav[0].childNodes[1].innerHTML = `<img src=${nextBtn}/>`;
     },
     selectedProject(index = 1) {
       const cardsImg = document.querySelectorAll(".arrow");
