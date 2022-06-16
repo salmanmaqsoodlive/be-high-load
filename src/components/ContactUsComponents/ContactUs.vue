@@ -6,26 +6,27 @@
     <div class="row justify-content-between align-items-center">
       <div class="col-md-4 col-12 padding-r contact-container">
         <b-form-input
+          :state="isNameValid"
           id="input-small"
           placeholder="Name"
           type="text"
           v-model="name"
-          v-validate="{ required: true, min: 3 }"
         ></b-form-input>
         <b-form-input
           id="input-small"
           placeholder="Email"
           type="email"
           v-model="email"
+          :state="isEmailValid"
         ></b-form-input>
-
-        <textarea
+        <b-form-textarea
           placeholder="Message"
           class="form-control"
           id="exampleFormControlTextarea1"
           rows="4"
           v-model="message"
-        ></textarea>
+          :state="isMessageValid"
+        ></b-form-textarea>
         <button
           v-if="!loading"
           class="contact-us-btn shadow"
@@ -80,6 +81,9 @@ export default {
       name: "",
       message: "",
       loading: false,
+      isNameValid: null,
+      isEmailValid: null,
+      isMessageValid: null,
     };
   },
   methods: {
@@ -92,9 +96,25 @@ export default {
     },
 
     validateFeilds() {
-      if (this.email === "" || this.name === "" || this.message === "") {
+      if (this.name === "") {
+        this.isNameValid = false;
         return false;
+      } else {
+        this.isNameValid = true;
       }
+      if (this.email === "" || !this.validateEmail(this.email)) {
+        this.isEmailValid = false;
+        return false;
+      } else {
+        this.isEmailValid = true;
+      }
+      if (this.message === "") {
+        this.isMessageValid = false;
+        return false;
+      } else {
+        this.isMessageValid = true;
+      }
+
       return true;
     },
     validateEmail(email) {
@@ -103,7 +123,6 @@ export default {
     },
 
     async contactUsButtonClicked() {
-      if (!this.validateEmail(this.email)) return;
       if (!this.validateFeilds()) return;
       try {
         this.loading = true;
@@ -116,6 +135,9 @@ export default {
         this.email = "";
         this.name = "";
         this.message = "";
+        this.isEmailValid = null;
+        this.isNameValid = null;
+        this.isMessageValid = null;
         this.loading = false;
       } catch (error) {
         console.log(error);

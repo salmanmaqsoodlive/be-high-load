@@ -10,8 +10,8 @@
       />
       <template v-else>
         <div class="row d-flex align-items-center">
-          <div class="col-md-4 col-12">
-            <p class="salary paragraph-style" v-if="vacancy.salary">
+          <div class="col-md-4 col-12" v-if="vacancy.salary">
+            <p class="salary paragraph-style">
               {{ vacancy.salary }}
             </p>
           </div>
